@@ -57,7 +57,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light"
-     style="position: fixed;width:100% ; background-color: white!important">
+     style="position: fixed;width:100% ; background-color: white!important; border-bottom-style: solid; border-bottom-color: darkgray; border-bottom-width: 1px">
     <div class="container-fluid" style="justify-content: space-between; flex-wrap:nowrap ; width:1000px">
         <a class="navbar-brand" href="#"><img style="width: 100px"
                                               src="https://fontmeme.com/images/instagram-new-logo.png"></a>
@@ -86,9 +86,9 @@
 </nav>
 
 <!--background-->
-<div style="display:flex; flex-direction: row;justify-content: center; padding-top:67px; background-color: #FAFAFA ; ">
+<div style="display:flex; flex-direction: row;justify-content: center; padding-top:100px; background-color: #FAFAFA ; ">
     <!--left board-->
-    <div style="width:600px; height:1000px; margin-right: 28%;min-width: 500px">
+    <div style="width:550px; height:1000px; margin-right: 28%;min-width: 500px">
         <!--first peed-->
         <div style=" border:solid 1px darkgray;  border-radius: 8px; background-color: white">
 
@@ -124,7 +124,7 @@
                 </div>
 
                 <!--Number of Likes /  Posted Text, Time / Comments-->
-                <div>
+                <div style="font-size: 13px">
                     <div><b>좋아요 21개</b></div> <!--좋아요 개수 변경되도록-->
                     <div style="display:flex; flex-direction: row">
                         <div><b>phmhp</b>첫번째 줄~
@@ -134,8 +134,10 @@
                         </div> <!--작성자 아이디 / 본문 글 변경되도록-->
 
                     </div>
+                    <div><b>instagram_user1</b> 댓글</div>
+                     <div><b>instagram_user2</b> 댓글</div>
+                    <div style="font-size:9px">5시간 전</div> <!--작성 시간-->
 
-                    <div style="font-size:12px">5시간 전</div> <!--작성 시간-->
                 </div>
             </div>
             <div>
@@ -145,16 +147,26 @@
             <div style="padding : 0 15px 15px  15px; display: flex;flex-direction: row ">
                 <div style="margin-top:-15px;font-size: 30px;">☺</div>
                 <input type="text" placeholder="댓글달기..."
-                       style="height:30px;width:490px; border-style: none; border-radius: 10px;display:block; margin:0px auto; outline:none; caret-color: black">
+                       style="height:30px;width:400px; border-style: none; border-radius: 10px;display:block; margin:0px auto; outline:none; caret-color: black">
                 <button style=";outline:none;border-style: none; background-color: white;color: lightskyblue; opacity:70%"><b>게시</b></button> <!--입력하면 글자 색이 바뀌게-->
             </div>
         </div>
     </div>
 
 
-    <div style="width:400px; height: 1000px; position: fixed;left: 56%;padding-left:20px">
+    <div style="width: 350px;height: 1000px; position: fixed; left: 57%; padding-left: 6px; margin-left: 40px;">
         <div> <!--right board-->
-            <div> My profile</div>
+
+            <!--My profile-->
+            <div style="display: flex; flex-direction: row;align-items:center">
+                <div class="box">
+                    <img class="profile"
+                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
+                </div>
+                <div>phmhp<br>HM Park</div>
+
+            </div>
+
             <div> Recommend User</div>
             <div> Another User_1</div>
             <div> Another User_1</div>
