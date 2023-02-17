@@ -13,11 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import sys
 
+sys.path.append(r'C:\toyProject\CreateInstagram\Instagram\Instagram')
 from django.contrib import admin
 from django.urls import path
-from .views import Sub
+
+from views import Sub #다른 폴더의 소스를 참조하는 거라서 . 이 필요
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Sub.as_view())
+    path('',Sub.as_view()) #이렇게 하면 content.views.py에 있는 Main클래스가 실행이 될 것. (이후 동작에 대한 설명은 Main클래스에 메모해놓음)
 ]
