@@ -11,6 +11,7 @@ db.sqlite3
 db.sqlite3-journal
 media
 
+
 #Django settins.py SECRET_KEY file
 secrets.json
 
@@ -70,6 +71,12 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+
+#2023-02-18 추가한 부분(아래)
+pytest.ini
+.idea/dataSources.xml
+.idea/Instagram.iml
+.idea/misc.xml
 
 # Translations
 *.mo
