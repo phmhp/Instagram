@@ -5,7 +5,9 @@ import os
 
 class Main(APIView):
     def get(self,request):
-        feed_list = Feed.objects.all() #select * from content_feed;와 동일한 역할을 함. #.models.py에서 정의한 Feed의 객체들을 모두 feed_list라는 리스트에 넣어줌
+        feed_list = Feed.objects.all().order_by('-id') # select * from content_feed;와 동일한 역할을 함.
+                                                      # .models.py에서 정의한 Feed의 객체들을 모두 feed_list라는 리스트에 넣어줌
+                                                      # order_by('-@')이런식으로 해주면 @에 해당되는 것에 따라 역순으로 가져온다는 의미. (= id를 역순으로 가져온다=최신 피드가 위에 있게 가져온다)
         for feed in feed_list :
             #print(feed.content)
             #print(feed_list) #얘가 실행되기 위해서는 Instagram 폴더의 urls.py에서 설정을 해줘야함.
