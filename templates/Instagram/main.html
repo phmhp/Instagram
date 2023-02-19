@@ -12,92 +12,44 @@
     <!--Google Icon-->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@40,500,0,-25"/>
-
-    <style>
-        #top {
-            position: relative;
-            z-index: 100;
-        }
-
-        .box {
-            margin: 15px;
-            border: solid 2px darkgrey;
-            width: 50px;
-            height: 50px;
-            border-radius: 70%;
-            overflow: hidden;
-        }
-
-        .profile {
-
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-        }
-
-        .box2 {
-            width: 30px;
-            height: 30px;
-            border-radius: 70%;
-            overflow: hidden;
-        }
-
-        .profile2 {
-            width: 100%;
-            margin-top: 0px;
-            object-fit: cover;
-        }
-
-        .box3 {
-            width: 20px;
-            height: 20px;
-            border-radius: 70%;
-            overflow: hidden;
-        }
-
-        .profile3 {
-            width: 100%;
-            margin-top: -9px;
-            object-fit: cover;
-        }
-
-        .post {
-            width: 100%;
-        <!-- height: -->
-        }
-    </style>
-
-
 </head>
 
 
 <body>
-<!--실습
-<div>
-    {%  for feed in feeds %} #for문을 이용해서 데이터베이스의 값을 써보는 과정 / html의 태그들도 같이 반복시켜줌.
-       <p> {{ feed.content }}</p>
-        <p> {{ feed.user_id }}</p>
-        <p> {{ feed.like_count }}</p>
-
-    {% endfor %}
-    -->
-</div>
-
-
 <!--nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="top"
-     style="position: fixed;width:100% ; background-color: white!important; border-bottom-style: solid; border-bottom-color: darkgray; border-bottom-width: 1px">
-    <div class="container-fluid" style="justify-content: space-between; flex-wrap:nowrap ; width:1000px">
-        <a class="navbar-brand" href="#"><img style="width: 100px"
-                                              src="https://fontmeme.com/images/instagram-new-logo.png"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+                                                             position: fixed;
+                                                             z-index: 100;
+                                                             width:100%;
+                                                             background-color: white!important;
+                                                             border-bottom-width: 1px;
+                                                             border-bottom-color: darkgray;
+                                                             border-bottom-style: solid;
+                                                        ">
 
-        <input class="form-control me-2" type="search" placeholder=검색 aria-label="Search"
-               style="width : 300px; text-align: center; background-color:#fafafa ; box-shadow: none; border-style: none;text-align:center">
-        <!--hover시에는 텍스트 왼쪽부터 입력되게-->
 
-        <!-- icons 아이콘들 사이에 공간 만들기-->
-        <div style="display:flex; flex-direction: row; ">
+    <div class="container-fluid" style="
+                             width:1000px;
+                             justify-content: space-between;
+                             flex-wrap:nowrap ;
+                             ">
+        <a class="navbar-brand" href="#"> <img style="width: 100px"
+                                               src="https://fontmeme.com/images/instagram-new-logo.png"></a>
+
+        <input class="form-control me-2" style="
+                                         width : 300px;
+                                         background-color:#fafafa ;
+                                         border-style: none;
+                                         box-shadow: none;
+                                         text-align: center;
+               " type="search" placeholder=검색 aria-label="Search"><!--hover시에는 텍스트 왼쪽부터 입력되게-->
+
+
+        <div style="
+             display:flex;
+             flex-direction: row;
+             ">
+
             <link rel="stylesheet"
                   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,500,1,-25"/>
             <span class="material-symbols-rounded" style="margin-right: 5px"> home </span>
@@ -105,9 +57,19 @@
             <span class="material-symbols-sharp" style="margin-right: 5px"> add_box </span>
             <span class="material-symbols-sharp" style="margin-right: 5px"> explore </span>
             <span class="material-symbols-sharp" style="margin-right: 5px"> favorite </span>
-            <div class="box3"> <!--높이 조절 height 100% 대신? -->
-                <img class="profile3"
-                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
+            <div class="box3" style="
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 70%;
+                                object-fit: cover;
+                                overflow: hidden;
+                                ">
+                <img class="profile3" style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        display: block;"
+                     src="http://file3.instiz.net/data/cached_img/upload/2020/06/24/22/ff4016915147760066745c00391a6f0c.jpg">
             </div>
 
         </div>
@@ -118,118 +80,166 @@
 
 
 <!--right board-->
-<div style="   width: 345px;    height: 1000px;    position: fixed;    left: 60%;    padding-left: 24px;">
+<div style="
+    position: fixed;
+    left: 60%;
+    width: 345px;
+    height: 1000px;
+    padding-left: 24px;
+    margin-top: 70px;
+    ">
     <div>
-        <div style="display: flex;flex-direction: column">
+        <div style="
+             display: flex;
+             flex-direction: column">
 
             <!--My profile-->
-            <div style="display: flex; flex-direction: row;align-items:center">
-                <div class="box">
-                    <img class="profile"
+            <div style="
+                 display: flex;
+                 flex-direction: row;
+                 align-items:center">
+
+                <div class="box" style="
+                                     width: 50px;
+                                     height: 50px;
+                                     margin: 15px;
+                                     border: solid 2px darkgrey;
+                                     border-radius: 70%;
+                                     overflow: hidden;">
+
+                    <img class="profile" style="
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;"
                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
                 </div>
-                <div style="display: flex;flex-direction: column">
-                    <div style="margin-bottom:-20px"><b>phmhp</b></div>
-                    <div style="font-size: 13px; color:gray"><br>HM Park</div>
+
+                <div style="
+                     display: flex;
+                     flex-direction: column;
+                     ">
+
+                    <div style="
+                         margin-bottom:-20px;
+                         font-weight: bold;
+                         ">phmhp
+                    </div>
+
+                    <div style="
+                         font-size: 13px;
+                         color:gray;
+                         "><br>HM Park
+                    </div>
                 </div>
-                <button style=";outline:none;border-style: none; background-color: #fafafa;color: dodgerblue;margin-left: auto">
-                    <b>전환</b></button>
+                <button style="
+                        margin-left: auto;
+                        background-color: #fafafa;
+                        border-style: none;
+                        font-weight: bold;
+                        color: dodgerblue;
+                        outline:none;
+                        ">전환
+                </button>
             </div>
-            <!--Recommend For You Message-->
-            <div style="display: flex; flex-direction: row;margin-bottom: 10px">
-                <div style=" color:gray"><b>회원님을 위한 추천</b></div>
-                <div style="margin-left: auto"><b>모두 보기</b></div>
+            <!--Recommend For You Message Part-->
+            <div style="
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px
+                ">
+                <div style="
+                     color:gray;
+                     font-weight: bold;
+                     ">회원님을 위한 추천
+                </div>
+
+                <div style="
+                     margin-left: auto;
+                     font-weight: bold;
+                     ">모두 보기
+                </div>
             </div>
 
             <!--Recommend Another Users -->
-            <!--user_1-->
-            <div style="display: flex; flex-direction: row;align-items:center">
-                <div class="box2">
-                    <img class="profile2"
+            <!--Recommended user-->
+            <div style="
+                 display: flex;
+                 flex-direction: row;
+                 align-items:center;
+                 ">
+                <div class="box2" style="
+                                  width: 30px;
+                                  height: 30px;
+                                  border-radius: 70%;
+                                  overflow: hidden;"
+                >
+                    <img class="profile2" style="
+                                          width: 100%;
+                                          margin-top: 0px;
+                                          object-fit: cover;"
                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
                 </div>
-                <div style="display: flex;flex-direction: column; margin-left: 10px">
-                    <div style="margin-bottom:-20px;font-size: 14px"><b>user_1</b></div>
-                    <div style="font-size: 11px; color:gray"><br>user_1 name</div>
+                <div style="
+                     display: flex;
+                     flex-direction: column;
+                     margin-left: 10px
+                     ">
+                    <div style="
+                         margin-bottom:-20px;
+                         font-size: 14px;
+                         font-weight: bold;"
+                    >user
+                    </div>
+                    <div style="
+                         color:gray;
+                         font-size:11px;
+                         "><br>user name
+                    </div>
                 </div>
-                <button style=";outline:none;border-style: none; background-color: #fafafa;color: dodgerblue;margin-left: auto;font-size: 14px">
-                    <b>팔로우</b></button>
+                <button style="margin-left: auto;
+                background-color: #fafafa;
+                border-style: none;
+                font-weight: bold;
+                font-size: 14px;
+                color: dodgerblue;
+                outline:none;
+                ">팔로우
+                </button>
             </div>
-
-            <!--user_2-->
-            <div style="display: flex; flex-direction: row;align-items:center">
-                <div class="box2">
-                    <img class="profile2"
-                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                </div>
-                <div style="display: flex;flex-direction: column; margin-left: 10px">
-                    <div style="margin-bottom:-20px;font-size: 14px"><b>user_2</b></div>
-                    <div style="font-size: 11px; color:gray"><br>user_2 name</div>
-                </div>
-                <button style=";outline:none;border-style: none; background-color: #fafafa;color: dodgerblue;margin-left: auto;font-size: 14px">
-                    <b>팔로우</b></button>
-            </div>
-
-            <!--user_3-->
-            <div style="display: flex; flex-direction: row;align-items:center">
-                <div class="box2">
-                    <img class="profile2"
-                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                </div>
-                <div style="display: flex;flex-direction: column; margin-left: 10px">
-                    <div style="margin-bottom:-20px;font-size: 14px"><b>user_3</b></div>
-                    <div style="font-size: 11px; color:gray"><br>user_3 name</div>
-                </div>
-                <button style=";outline:none;border-style: none; background-color: #fafafa;color: dodgerblue;margin-left: auto;font-size: 14px">
-                    <b>팔로우</b></button>
-            </div>
-            <!--user_4-->
-            <div style="display: flex; flex-direction: row;align-items:center">
-                <div class="box2">
-                    <img class="profile2"
-                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                </div>
-                <div style="display: flex;flex-direction: column; margin-left: 10px">
-                    <div style="margin-bottom:-20px;font-size: 14px"><b>user_4</b></div>
-                    <div style="font-size: 11px; color:gray"><br>user_4 name</div>
-                </div>
-                <button style=";outline:none;border-style: none; background-color: #fafafa;color: dodgerblue;margin-left: auto;font-size: 14px">
-                    <b>팔로우</b></button>
-            </div>
-
-            <!--user_5-->
-            <div style="display: flex; flex-direction: row;align-items:center">
-                <div class="box2">
-                    <img class="profile2"
-                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                </div>
-                <div style="display: flex;flex-direction: column; margin-left: 10px">
-                    <div style="margin-bottom:-20px;font-size: 14px"><b>user_5</b></div>
-                    <div style="font-size: 11px; color:gray"><br>user_5 name</div>
-                </div>
-                <button style=";outline:none;border-style: none; background-color: #fafafa;color: dodgerblue;margin-left: auto;font-size: 14px">
-                    <b>팔로우</b></button>
-            </div>
-
-
         </div>
     </div>
 
 </div>
 </div>
 <!--background-->
-<div style=" padding-top:100px; background-color:#fafafa ">
+<div style="
+    padding-top:100px;
+    background-color:#fafafa ">
 
-    {% for feed in feeds %}<!--left board-->
+    {% for feed in feeds %}
+        <!--left board-->
         <div style="margin-left:280px; margin-right:280px;display: flex; flex-direction: row ; justify-content: space-between">
             <!--left peed-->
             <div style=" border:solid 1px darkgray;  border-radius: 8px; background-color: white;
-                        width: 630px;   height: 790px;       margin-right: 22%; margin-bottom:3%;   min-width: 500px;">
+                        width: 610px;   height: 790px;       margin-right: 22%; margin-bottom:3%;   min-width: 500px;">
 
                 <!--User Information-->
                 <div style="display: flex; flex-direction: row;align-items:center">
-                    <div class="box">
-                        <img class="profile"
+                    <div class="box" style="
+                                width: 40px;
+                                height: 40px;
+                                margin: 15px 15px 15px 15px;
+                                border-radius: 70%;
+                                object-fit: cover;
+                                overflow: hidden;
+
+                                ">
+                        <img class="profile" style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        display: block;"
+
                              src="{{ feed.profile_image }}">
                     </div>
                     <div><b>{{ feed.user_id }}</b></div>
@@ -237,7 +247,7 @@
 
                 <!--Posted Image-->
                 <div>
-                    <img class="post"
+                    <img style="width:100%" class="post"
                          src="{{ feed.image }}">
                 </div>
 
@@ -265,8 +275,8 @@
                             </div> <!--작성자 아이디 / 본문 글 변경되도록-->
 
                         </div>
-                        <div><b>instagram_user1</b> 댓글</div>
-                        <div><b>instagram_user2</b> 댓글</div>
+                        <div style="font-weight:bold;">instagram_user 댓글</div>
+                        <div style="font-weight:bold;">instagram_user 댓글</div>
                         <div style="font-size:10px">5시간 전</div> <!--작성 시간-->
 
                     </div>
@@ -275,20 +285,42 @@
                     <hr> <!--구분선-->
                 </div>
                 <!--Input Comment-->
-                <div style="padding : 0 15px 15px  15px; display: flex;flex-direction: row ">
-                    <div style="margin-top:-15px;font-size: 30px;">☺</div>
+                <div style="
+                    display: flex;
+                    flex-direction: row;
+                    padding : 0 15px 15px  15px;
+                    ">
+                    <div style="
+                         margin-top:-15px;
+                         font-size: 30px;
+                         ">☺
+                    </div>
                     <input type="text" placeholder="댓글달기..."
-                           style="height:30px;width:400px; border-style: none; border-radius: 10px;display:block; margin:0px auto; outline:none; caret-color: black">
-                    <button style=";outline:none;border-style: none; background-color: white;color: lightskyblue; opacity:70%">
-                        <b>게시</b></button> <!--입력하면 글자 색이 바뀌게-->
+                           style="
+                           display:block;
+                           width:400px;
+                           height:30px;
+                           margin:0px auto;
+                           border-style: none;
+                           border-radius: 10px;
+                           outline:none;
+                           caret-color: black;">
+
+                    <button style="
+                            background-color: white;
+                            border-style: none;
+                            color: lightskyblue;
+                            font-weight:bold;
+                            opacity:70%;
+                            outline:none;
+                            ">게시
+                    </button> <!--입력하면 글자 색이 바뀌게-->
                 </div>
             </div>
         </div>
         <!--left board (end)-->
 
-    {% endfor %}
-
-
+    {% endfor %} <!-- for-loop을 통해서 피드 데이터베이스에서 반복적으로 가져옴-->
 
 
 </div> <!--left board + right board (end)-->
