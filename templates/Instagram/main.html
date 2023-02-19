@@ -217,11 +217,18 @@
     background-color:#fafafa ">
 
     {% for feed in feeds %}
-        <!--left board-->
+        <!--아래 div에 왼쪽 오른쪽 다 담기게 해야함 -->
         <div style="margin-left:280px; margin-right:280px;display: flex; flex-direction: row ; justify-content: space-between">
             <!--left peed-->
-            <div style=" border:solid 1px darkgray;  border-radius: 8px; background-color: white;
-                        width: 610px;   height: 790px;       margin-right: 22%; margin-bottom:3%;   min-width: 500px;">
+            <div style="    border: solid 1px darkgray;
+    border-radius: 8px;
+    background-color: white;
+    width: 610px;
+    height: 70%;
+    /* margin-right: 22%; */
+    margin-bottom: 3%;
+    min-width: 510px;
+}">
 
                 <!--User Information-->
                 <div style="display: flex; flex-direction: row;align-items:center">
@@ -246,12 +253,19 @@
                 </div>
 
                 <!--Posted Image-->
+
+
                 <div>
-                    <img style="width:100%" class="post"
+                    <img style="
+                        width:100%;
+                        overflow:hidden;
+                        object-fit:cover;
+                        aspect-ratio: 4/3;
+                        " class="post"
                          src="{{ feed.image }}">
                 </div>
 
-                <div style="padding : 15px">
+                <div style="padding : 15px 15px 0 15px">
                     <!--Reaction Icons-->
                     <div style="display:flex;flex-direction: row;justify-content:space-between">
                         <div>
