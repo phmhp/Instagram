@@ -12,21 +12,14 @@
     <!--Google Icon-->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@40,500,0,-25"/>
+
+
+
+
 </head>
 
 <body>
 
-<!--body 구조
-(내비 바)
-
-    (배경
-
-
-    ( 가로 정렬:  (( 세로 정렬: 왼쪽  ))
-                 ( 오른쪽         )  )
-배경끝)
-
--->
 <!--nav bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
                                                              position: fixed;
@@ -89,11 +82,97 @@
     </div>
 </nav>
 
+
+<!--모달팝업-->
+<!--<body style="overflow: hidden">-->
+<div>
+    <!--모달팝업 배경-->
+    <div class= "modalBackground" style="     display: flex;
+
+    background: rgba(0,0,0,0.7);
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(50px);
+    justify-content: center;
+    align-items: center;">
+
+        <!--모달팝업 (자체)-->
+        <div style="        display: flex;
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    z-index: 100000;
+    position: absolute;
+    flex-direction: column;
+    border-radius: 20px;
+
+border-radius: 20px"
+             }>
+            <div style="    display: flex;
+    font-weight: bold;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: -5px;">새 게시물 만들기
+            </div><!--구분선-->
+            <div>
+                <hr>
+            </div> <!--구분선 끝-->
+
+            <!--이미지 캡슐-->
+            <div style="    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 460px;
+    width: 100%;
+    /* bottom: 0; */
+    position: absolute;
+    align-items: center;
+    /* margin-bottom: 50px;">
+                <span  class="material-symbols-outlined" style="font-size: 150px;">
+photo_library
+</span>
+            </div><!--이미지 캡슐 끝-->
+            <div style="font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 150px;">사진과 동영상을 여기에 끌어다 놓으세요
+            </div>
+            <!--버튼 캡슐--><div style="    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    bottom: 100px;
+}"><button style="
+                           height: 35px;
+    width: 150px;
+    background-color: dodgerblue;
+    border-style: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+                        ">컴퓨터에서 선택</button></div><!--버튼 캡슐 끝-->
+
+        </div><!--모달팝업 (자체) 끝-->
+
+    </div><!--모달팝업 배경 끝-->
+
+
+</div><!--모달팝업 끝-->
+
+
 <!--배경 시작-->
 <div style="
     padding-top:100px;
     background-color:#fafafa ">
-
 
     <!--오른쪽 캡슐-->
     <div style="
