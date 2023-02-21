@@ -13,8 +13,8 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@40,500,0,-25"/>
 
-
-
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 
@@ -23,20 +23,20 @@
 <!--nav bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
                                                              position: fixed;
-                                                             z-index: 100;
                                                              width:100%;
                                                              background-color: white!important;
                                                              border-bottom-width: 1px;
                                                              border-bottom-color: darkgray;
                                                              border-bottom-style: solid;
-                                                        ">
+                                                             z-index: 100;
+                                                             ">
 
 
     <div class="container-fluid" style="
-                             width:1000px;
-                             justify-content: space-between;
-                             flex-wrap:nowrap ;
-                             ">
+                                 width:1000px;
+                                 justify-content: space-between;
+                                 flex-wrap:nowrap ;
+                                 ">
         <a class="navbar-brand" href="#"> <img style="width: 100px"
                                                src="https://fontmeme.com/images/instagram-new-logo.png"></a>
 
@@ -56,17 +56,28 @@
 
             <link rel="stylesheet"
                   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,500,1,-25"/>
-            <span class="material-symbols-rounded" style="margin-right: 5px"> home </span>
-            <span class="material-symbols-sharp" style="margin-right: 5px"> send </span>
-            <span class="material-symbols-sharp" style="margin-right: 5px"> add_box </span>
-            <span class="material-symbols-sharp" style="margin-right: 5px"> explore </span>
-            <span class="material-symbols-sharp" style="margin-right: 5px"> favorite </span>
+            <span class="material-symbols-rounded" style="
+                                                    margin-right: 5px;
+                                                    cursor:pointer;"> home </span>
+            <span class="material-symbols-sharp" style="
+                                                    margin-right: 5px;
+                                                    cursor:pointer;"> send </span>
+            <span class="material-symbols-sharp" id="nav_bar_add_box" style="
+                                                                        margin-right: 5px;
+                                                                        cursor:pointer;"> add_box </span>
+            <span class="material-symbols-sharp" style="
+                                                    margin-right: 5px;
+                                                    cursor:pointer;"> explore </span>
+            <span class="material-symbols-sharp" style="
+                                                    margin-right: 5px;
+                                                    cursor:pointer;"> favorite </span>
             <div class="box3" style="
                                 width: 25px;
                                 height: 25px;
                                 border-radius: 70%;
                                 object-fit: cover;
                                 overflow: hidden;
+                                cursor:pointer;
                                 ">
                 <img class="profile3" style="
                                         width: 100%;
@@ -83,98 +94,12 @@
 </nav>
 
 
-<!--모달팝업-->
-<!--<body style="overflow: hidden">-->
-<div>
-    <!--모달팝업 배경-->
-    <div class= "modalBackground" style="     display: flex;
-
-    background: rgba(0,0,0,0.7);
-    z-index: 10000;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-
-    backdrop-filter: blur(50px);
-    justify-content: center;
-    align-items: center;">
-
-        <!--모달팝업 (자체)-->
-        <div style="        display: flex;
-    background-color: white;
-    width: 500px;
-    height: 500px;
-    z-index: 100000;
-    position: absolute;
-    flex-direction: column;
-    border-radius: 20px;
-
-border-radius: 20px"
-             }>
-            <div style="    display: flex;
-    font-weight: bold;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: -5px;">새 게시물 만들기
-            </div><!--구분선-->
-            <div>
-                <hr>
-            </div> <!--구분선 끝-->
-
-            <!--이미지 캡슐-->
-            <div style="    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 460px;
-    width: 100%;
-    /* bottom: 0; */
-    position: absolute;
-    align-items: center;
-    /* margin-bottom: 50px;">
-                <span  class="material-symbols-outlined" style="font-size: 150px;">
-photo_library
-</span>
-            </div><!--이미지 캡슐 끝-->
-            <div style="font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    bottom: 150px;">사진과 동영상을 여기에 끌어다 놓으세요
-            </div>
-            <!--버튼 캡슐--><div style="    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    bottom: 100px;
-}"><button style="
-                           height: 35px;
-    width: 150px;
-    background-color: dodgerblue;
-    border-style: none;
-    font-weight: bold;
-    color: white;
-    border-radius: 8px;
-                        ">컴퓨터에서 선택</button></div><!--버튼 캡슐 끝-->
-
-        </div><!--모달팝업 (자체) 끝-->
-
-    </div><!--모달팝업 배경 끝-->
-
-
-</div><!--모달팝업 끝-->
-
-
-<!--배경 시작-->
+<!--Background-->
 <div style="
     padding-top:100px;
     background-color:#fafafa ">
 
-    <!--오른쪽 캡슐-->
+    <!--Right Board div-->
     <div style="
         position: fixed;
     left: 915px;
@@ -303,10 +228,10 @@ photo_library
             </div>
         </div>
     </div>
-    <!--오른쪽 캡슐 끝-->
+    <!--Right Board div (end)-->
 
 
-    <div> <!--왼쪽 캡슐 (반복) 안쪽-->
+    <div> <!--Left Feeds div (loop) -->
         {% for feed in feeds %}
             <div style="    display: flex;
     flex-direction: column;
@@ -431,11 +356,126 @@ photo_library
         {% endfor %} <!-- for-loop을 통해서 피드 데이터베이스에서 반복적으로 가져옴-->
 
 
-    </div><!--왼쪽 캡슐 (반복) 끝-->
+    </div><!--Left Feeds div (loop) (end)-->
 
 
-</div><!--배경 끝-->
+</div><!--Background (end)-->
 
+
+<!--Modal pop-up-->
+<!--<body style="overflow: hidden">-->
+<div>
+    <!--close button-->
+    <div>
+        <span class="material-symbols-outlined" style="
+                                                position: absolute;
+                                                font-size: 30px;
+                                                color: white;
+                                                top: 90px;
+                                                right: 25px;
+                                                cursor: pointer;
+                                                z-index: 1000;
+                                                  }">close </span> </div>
+
+    <!--Modal pop-up Background-->
+    <div class="modal_overlay" style="
+                               display: none;
+                               position: absolute;
+                               justify-content: center;
+                               width: 100%;
+                               height: 100%;
+                               background: rgba(0, 0, 0, 0.7);
+                               backdrop-filter: blur(50px);
+                               align-items: center;
+                               top: 0;">
+
+        <!--Modal pop-up (itself)-->
+        <div class="modal_window" style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    position: absolute;
+                                    width: 500px;
+                                    height: 500px;background-color: white;
+                                    border-radius: 20px;
+                                    z-index: 100000;" }>
+            <div style="
+                 display:flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 margin-top: 10px;
+                 margin-bottom: -5px;
+                 font-weight: bold;
+                ">새 게시물 만들기
+            </div>
+            <!--구분선-->
+            <div>
+                <hr>
+            </div>   <!--구분선 (end)-->
+
+            <!--Icon div-->
+            <div style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                justify-content: center;
+                width: 100%;
+                height: 460px;
+                align-items: center;
+                top: 0;">
+                <span class="material-symbols-outlined" style="font-size: 150px;">photo_library</span>
+            </div><!--Icon div (end)-->
+            <div style="
+                        font-size: 20px;
+                        display: flex;
+                        position: absolute;
+                        flex-direction: row;
+                        justify-content: center;
+                        width: 100%;
+                        bottom: 150px;">사진과 동영상을 여기에 끌어다 놓으세요
+            </div>
+            <!--Button div-->
+            <div style="
+                display: flex;
+                position: absolute;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                bottom: 100px;
+                }">
+                <button style="
+                        width: 150px;
+                        height: 35px;
+                        background-color: dodgerblue;
+                        border-style: none;
+                        border-radius: 8px;
+                        font-weight: bold;
+                        color: white;
+                        ">컴퓨터에서 선택
+                </button>
+            </div><!--Button div (end)-->
+
+        </div><!--Modal pop-up (itself) (end)-->
+
+    </div><!--Modal pop-up Background (end)-->
+
+
+</div><!--Modal pop-up (end)-->
+
+
+<script>
+    $('#nav_bar_add_box').click(function () {
+        $('.modal_overlay').css({
+            display: 'flex'
+        }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨
+        $(document.body).css({
+            overflow: 'hidden'
+        })//스크롤 없어지게 하기 위해 body에 overflow를 hidden으로 (첫 화면만큼의 크기만 살아있게 됨)
+    });
+
+
+</script>
 
 </body>
+
+
 </html>

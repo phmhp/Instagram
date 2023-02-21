@@ -18,7 +18,7 @@ import sys
 sys.path.append(r'C:\toyProject\CreateInstagram\Instagram\Instagram')
 from django.contrib import admin
 from django.urls import path
-from views import Sub #다른 폴더의 소스를 참조하는 거라서 . 이 필요
+#다른 폴더의 소스를 참조하는 거라서 . 이 필요
 from content.views import Main
 
 urlpatterns = [
