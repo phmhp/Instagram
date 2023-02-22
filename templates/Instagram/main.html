@@ -364,27 +364,29 @@
 
 <!--Modal pop-up-->
 <!--<body style="overflow: hidden">-->
-<div>
+<div id = "modal_wrap">
     <!--close button-->
     <div>
-        <span class="material-symbols-outlined" style="
-                                                position: absolute;
-                                                font-size: 30px;
-                                                color: white;
-                                                top: 90px;
-                                                right: 25px;
-                                                cursor: pointer;
-                                                z-index: 1000;
-                                                  }">close </span> </div>
+                <span id="modal_close" class="material-symbols-outlined" style="
+                                                                        display:none;
+                                                                        position: fixed;
+                                                                        font-size: 30px;
+                                                                        color: white;
+                                                                        top: 90px;
+                                                                        right: 25px;
+                                                                        cursor: pointer;
+                                                                        z-index: 1000;
+
+                                                                          }">close </span> </div>
 
     <!--Modal pop-up Background-->
     <div class="modal_overlay" style="
                                display: none;
-                               position: absolute;
+                               position: fixed;
                                justify-content: center;
                                width: 100%;
                                height: 100%;
-                               background: rgba(0, 0, 0, 0.7);
+                               background: rgba(0, 0, 0, 0.3);
                                backdrop-filter: blur(50px);
                                align-items: center;
                                top: 0;">
@@ -463,13 +465,32 @@
 
 
 <script>
+    //add_box를 눌러서 모달팝업 띄우기
     $('#nav_bar_add_box').click(function () {
         $('.modal_overlay').css({
             display: 'flex'
-        }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨
+        }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨 // 피드 아래 보고있다가 맨 위로 올라가서 모달창 보이도록 수정하기.
+        $("#modal_close").css({
+            display:'flex'
+        })
         $(document.body).css({
-            overflow: 'hidden'
+            overflow: 'hidden',
+            scrollWidth:'16px'
         })//스크롤 없어지게 하기 위해 body에 overflow를 hidden으로 (첫 화면만큼의 크기만 살아있게 됨)
+
+    });
+
+    <!--x표시를 눌러서 모달팝업 닫기-->
+    $('#modal_close').click(function() {
+        $('.modal_overlay').css({
+            display:'none'
+        })
+        $("#modal_close").css({
+            display:'none'
+        })
+        $(document.body).css({
+            overflow:'auto'
+        })
     });
 
 
