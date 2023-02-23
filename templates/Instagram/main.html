@@ -25,12 +25,14 @@
 
     <style>
         .button_no_background:hover {
-            color: #063C6E  !important ;
+            color: #063C6E !important;
             opacity: 1 !important;
         }
+
         .text_no_background:hover {
-            color : gray
+            color: gray
         }
+
         .button_background:hover {
             background-color: #1877F2 !important;
         }
@@ -117,8 +119,9 @@
 
     <!--Background-->
     <div style="
+    width:100vw;
     padding-top:100px;
-    background-color:#fafafa ">
+    background-color:#fafafa;">
 
         <!--Right Board div-->
         <div style="
@@ -173,7 +176,7 @@
                         </div>
 
 
-                        <button  class="button_no_background" style="
+                        <button class="button_no_background" style="
                         margin-left: auto;
                         background: #fafafa;
                         border-style: none;
@@ -195,7 +198,7 @@
                      ">회원님을 위한 추천
                         </div>
 
-                        <div class ="text_no_background" style="
+                        <div class="text_no_background" style="
                      margin-left: auto;
                      font-weight: bold;
                      ">모두 보기
@@ -362,7 +365,7 @@
                            outline:none;
                            caret-color: black;">
 
-                            <button  class="button_no_background"  style="
+                            <button class="button_no_background" style="
                             background-color: white;
                             border-style: none;
                             color: lightskyblue;
@@ -403,10 +406,10 @@
                                                                           }">close </span></div>
 
 
-
-  "></div> <!--modal_overaly + modal_pop-up scroll bar (end)-->
-    <!--Modal pop-up Background-->
-    <div class="modal_overlay" style="
+    ">
+</div> <!--modal_overaly + modal_pop-up scroll bar (end)-->
+<!--Modal pop-up Background-->
+<div class="modal_overlay" style="
                                    display: none;
     position: fixed;
     justify-content: center;
@@ -420,8 +423,8 @@
     overflow-y: scroll;
 ">
 
-        <!--Modal pop-up (itself)-->
-        <div class="modal_window" style="
+    <!--Modal pop-up (itself)-->
+    <div class="modal_window" style="
                                     display: flex;
                                     flex-direction: column;
                                     position: absolute;
@@ -429,7 +432,12 @@
                                     height: 500px;background-color: white;
                                     border-radius: 20px;
                                     z-index: 100000;" }>
-            <div style="
+        <div id="modal_white_zone" style=   " width: 100%;
+    height: 45px;
+    background-color: white;
+    /* opacity: 0.4; */
+    border-radius: 20px 20px 0 0;">
+        <div style="
                  display:flex;
                  flex-direction: row;
                  justify-content: center;
@@ -437,25 +445,44 @@
                  margin-bottom: -5px;
                  font-weight: bold;
                 ">새 게시물 만들기
-            </div>
-            <!--구분선-->
-            <div>
-                <hr>
-            </div>   <!--구분선 (end)-->
+        </div>
+        <!--구분선-->
+        <div>
+            <hr>
+        </div>   <!--구분선 (end)-->
+</div>
 
-            <!--Icon div-->
-            <div style="
-                display: flex;
-                flex-direction: row;
-                position: absolute;
-                justify-content: center;
-                width: 100%;
-                height: 460px;
-                align-items: center;
-                top: 0;">
-                <span class="material-symbols-outlined" style="font-size: 150px;">photo_library</span>
-            </div><!--Icon div (end)-->
-            <div style="
+        <div>
+            <!--img_upload_space 시작-->
+            <div class='img_upload_space' style="
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 454px;
+    align-items: center;
+    top: 46px;
+    border-radius: 0 0 20px 20px;
+    z-index:140;
+
+"></div><!--img_upload_space 끝-->
+            <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 시작-->
+            <div id="except_img_upload_space" style="display:flex">
+                <!--Icon div-->
+                <div id="modal_upload_icon" style="display: flex;
+    height: 240px;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    /* align-items: baseline; */
+    justify-content: center;
+    padding-top: 87px;
+}">
+                    <span class="material-symbols-outlined"
+                          style="font-size: 150px;margin-bottom:70px">photo_library</span>
+                </div><!--Icon div (end)-->
+                <div style="
                         font-size: 20px;
                         display: flex;
                         position: absolute;
@@ -463,9 +490,9 @@
                         justify-content: center;
                         width: 100%;
                         bottom: 150px;">사진과 동영상을 여기에 끌어다 놓으세요
-            </div>
-            <!--Button div-->
-            <div style="
+                </div>
+                <!--Button div-->
+                <div style="
                 display: flex;
                 position: absolute;
                 flex-direction: row;
@@ -473,7 +500,7 @@
                 width: 100%;
                 bottom: 100px;
                 }">
-                <button class="button_background" style="
+                    <button class="button_background" style="
                         width: 150px;
                         height: 35px;
                         background-color: dodgerblue;
@@ -481,10 +508,11 @@
                         border-radius: 8px;
                         font-weight: bold;
                         color: white;
+                        z-index:150;
                         ">컴퓨터에서 선택
-                </button>
-            </div><!--Button div (end)-->
-
+                    </button>
+                </div><!--Button div (end)-->
+            </div> <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 끝-->
         </div><!--Modal pop-up (itself) (end)-->
 
     </div><!--Modal pop-up Background (end)-->
@@ -493,13 +521,6 @@
 </div><!--modal_overaly + modal_pop-up (end)-->
 
 <script>
-    $('.button').css('background-color','red').hover(
-    function(){
-        $(this).css('background-color','aqua');
-    },
-    function(){
-        $(this).css('background-color','red');
-    });
 
 
     //add_box를 눌러서 모달팝업 띄우기
@@ -533,6 +554,71 @@
     });
 
 
+    <!--드래그앤드롭-->
+    $('.img_upload_space')
+        .on("dragover", dragOver)
+        .on("dragleave", dragOver)
+        .on("drop", uploadFiles);
+
+    function dragOver(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (e.type == "dragover") {
+            $('.modal_window').css({
+                "background-color": "#F5F5F5"
+            });
+            $('#modal_upload_icon').css({
+                "color": "#21A2F6"
+            });
+        } else {
+            $('.modal_window').css({
+                "background-color": "white"
+            });
+            $('#modal_upload_icon').css({
+                "color": "black"
+            });
+
+
+        }
+    }
+
+
+    function uploadFiles(e) {
+        e.stopPropagation();
+        e.preventDefault();
+//        dragOver(e); //1
+
+        e.dataTransfer = e.originalEvent.dataTransfer; //2
+        var files = e.target.files || e.dataTransfer.files;
+
+        if (files.length > 1) {
+            alert('하나만 올릴 수 있습니다.');
+
+            return;
+        }
+        if (files[0].type.match(/image.*/)) {
+
+        } else {
+            alert('이미지가 아닙니다.');
+            return;
+        }
+        if (files[0].type.match(/image.*/)) {
+            $(e.target).css({
+                "background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
+                "outline": "none",
+                "background-size": "100% 100%"
+
+
+            });
+            $("#except_img_upload_space").css({
+                "display": "none"
+            });
+        } else {
+            alert('이미지가 아닙니다.');
+            return;
+        }
+
+    }
 </script>
 
 
