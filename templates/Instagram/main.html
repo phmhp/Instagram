@@ -16,31 +16,37 @@
     <!--Jquery-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+    <!--z-index memo
+    z-index 10   navbar navbar-expand-lg navbar-light bg-light
+    z-index 15   modal_close
+    z-index 15   modal_scrollbar
+    -->
 </head>
 
 <body>
+<div id="try_element"><!--모달제외한 메인화면 전체-->
 
-<!--nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
                                                              position: fixed;
-                                                             width:100%;
+                                                             width:100vw;
                                                              background-color: white!important;
                                                              border-bottom-width: 1px;
                                                              border-bottom-color: darkgray;
                                                              border-bottom-style: solid;
-                                                             z-index: 100;
+                                                             z-index: 10;
                                                              ">
 
 
-    <div class="container-fluid" style="
+        <div class="container-fluid" style="
                                  width:1000px;
                                  justify-content: space-between;
                                  flex-wrap:nowrap ;
                                  ">
-        <a class="navbar-brand" href="#"> <img style="width: 100px"
-                                               src="https://fontmeme.com/images/instagram-new-logo.png"></a>
+            <a class="navbar-brand" href="#"> <img style="width: 100px"
+                                                   src="https://fontmeme.com/images/instagram-new-logo.png"></a>
 
-        <input class="form-control me-2" style="
+            <input class="form-control me-2" style="
                                          width : 300px;
                                          background-color:#fafafa ;
                                          border-style: none;
@@ -49,29 +55,29 @@
                " type="search" placeholder=검색 aria-label="Search"><!--hover시에는 텍스트 왼쪽부터 입력되게-->
 
 
-        <div style="
+            <div style="
              display:flex;
              flex-direction: row;
              ">
 
-            <link rel="stylesheet"
-                  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,500,1,-25"/>
-            <span class="material-symbols-rounded" style="
+                <link rel="stylesheet"
+                      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,500,1,-25"/>
+                <span class="material-symbols-rounded" style="
                                                     margin-right: 5px;
                                                     cursor:pointer;"> home </span>
-            <span class="material-symbols-sharp" style="
+                <span class="material-symbols-sharp" style="
                                                     margin-right: 5px;
                                                     cursor:pointer;"> send </span>
-            <span class="material-symbols-sharp" id="nav_bar_add_box" style="
+                <span class="material-symbols-sharp" id="nav_bar_add_box" style="
                                                                         margin-right: 5px;
                                                                         cursor:pointer;"> add_box </span>
-            <span class="material-symbols-sharp" style="
+                <span class="material-symbols-sharp" style="
                                                     margin-right: 5px;
                                                     cursor:pointer;"> explore </span>
-            <span class="material-symbols-sharp" style="
+                <span class="material-symbols-sharp" style="
                                                     margin-right: 5px;
                                                     cursor:pointer;"> favorite </span>
-            <div class="box3" style="
+                <div class="box3" style="
                                 width: 25px;
                                 height: 25px;
                                 border-radius: 70%;
@@ -79,46 +85,46 @@
                                 overflow: hidden;
                                 cursor:pointer;
                                 ">
-                <img class="profile3" style="
+                    <img class="profile3" style="
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
                                         display: block;"
-                     src="http://file3.instiz.net/data/cached_img/upload/2020/06/24/22/ff4016915147760066745c00391a6f0c.jpg">
+                         src="http://file3.instiz.net/data/cached_img/upload/2020/06/24/22/ff4016915147760066745c00391a6f0c.jpg">
+                </div>
+
             </div>
 
+
         </div>
+    </nav>
 
 
-    </div>
-</nav>
-
-
-<!--Background-->
-<div style="
+    <!--Background-->
+    <div style="
     padding-top:100px;
     background-color:#fafafa ">
 
-    <!--Right Board div-->
-    <div style="
+        <!--Right Board div-->
+        <div style="
         position: fixed;
     left: 915px;
     width: 345px;
     height: 1000px;
     padding-left: 24px;
     margin-top: -15px;">
-        <div>
-            <div style="
+            <div>
+                <div style="
              display: flex;
              flex-direction: column">
 
-                <!--My profile-->
-                <div style="
+                    <!--My profile-->
+                    <div style="
                  display: flex;
                  flex-direction: row;
                  align-items:center">
 
-                    <div class="box" style="
+                        <div class="box" style="
                                      width: 50px;
                                      height: 50px;
                                      margin: 15px;
@@ -126,31 +132,31 @@
                                      border-radius: 70%;
                                      overflow: hidden;">
 
-                        <img class="profile" style="
+                            <img class="profile" style="
                                             width: 100%;
                                             height: 100%;
                                             object-fit: cover;"
-                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                    </div>
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
+                        </div>
 
-                    <div style="
+                        <div style="
                      display: flex;
                      flex-direction: column;
                      ">
 
-                        <div style="
+                            <div style="
                          margin-bottom:-20px;
                          font-weight: bold;
                          ">phmhp
-                        </div>
+                            </div>
 
-                        <div style="
+                            <div style="
                          font-size: 13px;
                          color:gray;
                          "><br>HM Park
+                            </div>
                         </div>
-                    </div>
-                    <button style="
+                        <button style="
                         margin-left: auto;
                         background-color: #fafafa;
                         border-style: none;
@@ -158,64 +164,64 @@
                         color: dodgerblue;
                         outline:none;
                         ">전환
-                    </button>
-                </div>
-                <!--Recommend For You Message Part-->
-                <div style="
+                        </button>
+                    </div>
+                    <!--Recommend For You Message Part-->
+                    <div style="
                 display: flex;
                 flex-direction: row;
                 margin-bottom: 10px
                 ">
-                    <div style="
+                        <div style="
                      color:gray;
                      font-weight: bold;
                      ">회원님을 위한 추천
-                    </div>
+                        </div>
 
-                    <div style="
+                        <div style="
                      margin-left: auto;
                      font-weight: bold;
                      ">모두 보기
+                        </div>
                     </div>
-                </div>
 
-                <!--Recommend Another Users -->
-                <!--Recommended user-->
-                <div style="
+                    <!--Recommend Another Users -->
+                    <!--Recommended user-->
+                    <div style="
                  display: flex;
                  flex-direction: row;
                  align-items:center;
                  ">
-                    <div class="box2" style="
+                        <div class="box2" style="
                                   width: 30px;
                                   height: 30px;
                                   border-radius: 70%;
                                   overflow: hidden;"
-                    >
-                        <img class="profile2" style="
+                        >
+                            <img class="profile2" style="
                                           width: 100%;
                                           margin-top: 0px;
                                           object-fit: cover;"
-                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                    </div>
-                    <div style="
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
+                        </div>
+                        <div style="
                      display: flex;
                      flex-direction: column;
                      margin-left: 10px
                      ">
-                        <div style="
+                            <div style="
                          margin-bottom:-20px;
                          font-size: 14px;
                          font-weight: bold;"
-                        >user
-                        </div>
-                        <div style="
+                            >user
+                            </div>
+                            <div style="
                          color:gray;
                          font-size:11px;
                          "><br>user name
+                            </div>
                         </div>
-                    </div>
-                    <button style="margin-left: auto;
+                        <button style="margin-left: auto;
                 background-color: #fafafa;
                 border-style: none;
                 font-weight: bold;
@@ -223,21 +229,21 @@
                 color: dodgerblue;
                 outline:none;
                 ">팔로우
-                    </button>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Right Board div (end)-->
+        <!--Right Board div (end)-->
 
 
-    <div> <!--Left Feeds div (loop) -->
-        {% for feed in feeds %}
-            <div style="    display: flex;
+        <div> <!--Left Feeds div (loop) -->
+            {% for feed in feeds %}
+                <div style="    display: flex;
     flex-direction: column;
     margin-left: 18%;">
-                <!--left peed-->
-                <div style="    border: solid 1px darkgray;
+                    <!--left peed-->
+                    <div style="    border: solid 1px darkgray;
     border-radius: 8px;
     background-color: white;
     width: 610px;
@@ -247,9 +253,9 @@
     min-width: 510px;
 }">
 
-                    <!--User Information-->
-                    <div style="display: flex; flex-direction: row;align-items:center">
-                        <div class="box" style="
+                        <!--User Information-->
+                        <div style="display: flex; flex-direction: row;align-items:center">
+                            <div class="box" style="
                                 width: 40px;
                                 height: 40px;
                                 margin: 15px 15px 15px 15px;
@@ -258,78 +264,78 @@
                                 overflow: hidden;
 
                                 ">
-                            <img class="profile" style="
+                                <img class="profile" style="
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
                                         display: block;"
 
-                                 src="{{ feed.profile_image }}">
+                                     src="{{ feed.profile_image }}">
+                            </div>
+                            <div><b>{{ feed.user_id }}</b></div>
                         </div>
-                        <div><b>{{ feed.user_id }}</b></div>
-                    </div>
 
-                    <!--Posted Image-->
+                        <!--Posted Image-->
 
 
-                    <div>
-                        <img style="
+                        <div>
+                            <img style="
                         width:100%;
                         overflow:hidden;
                         object-fit:cover;
                         aspect-ratio: 4/3;
                         " class="post"
-                             src="{{ feed.image }}">
-                    </div>
+                                 src="{{ feed.image }}">
+                        </div>
 
-                    <div style="padding : 15px 15px 0 15px">
-                        <!--Reaction Icons-->
-                        <div style="display:flex;flex-direction: row;justify-content:space-between">
-                            <div>
+                        <div style="padding : 15px 15px 0 15px">
+                            <!--Reaction Icons-->
+                            <div style="display:flex;flex-direction: row;justify-content:space-between">
+                                <div>
                                         <span class="material-symbols-outlined"
                                               style="margin-right: 5px">favorite</span>
-                                <link rel="stylesheet"
-                                      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-                                <span class="material-symbols-outlined"
-                                      style="margin-right: 5px">mode_comment</span>
-                                <span class="material-symbols-outlined"
-                                      style="margin-right: 5px">send</span>
+                                    <link rel="stylesheet"
+                                          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+                                    <span class="material-symbols-outlined"
+                                          style="margin-right: 5px">mode_comment</span>
+                                    <span class="material-symbols-outlined"
+                                          style="margin-right: 5px">send</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined">bookmark</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="material-symbols-outlined">bookmark</span>
+
+                            <!--Number of Likes /  Posted Text, Time / Comments-->
+                            <div style="font-size: 14px">
+                                <div><b>좋아요 {{ feed.like_count }}개</b></div> <!--좋아요 개수 변경되도록-->
+                                <div style="display:flex; flex-direction: row">
+                                    <div><b>{{ feed.user_id }}</b>{{ feed.content }}
+                                    </div> <!--작성자 아이디 / 본문 글 변경되도록-->
+
+                                </div>
+                                <div style="font-weight:bold;">instagram_user 댓글</div>
+                                <div style="font-weight:bold;">instagram_user 댓글</div>
+                                <div style="font-size:10px">5시간 전</div> <!--작성 시간-->
+
                             </div>
                         </div>
-
-                        <!--Number of Likes /  Posted Text, Time / Comments-->
-                        <div style="font-size: 14px">
-                            <div><b>좋아요 {{ feed.like_count }}개</b></div> <!--좋아요 개수 변경되도록-->
-                            <div style="display:flex; flex-direction: row">
-                                <div><b>{{ feed.user_id }}</b>{{ feed.content }}
-                                </div> <!--작성자 아이디 / 본문 글 변경되도록-->
-
-                            </div>
-                            <div style="font-weight:bold;">instagram_user 댓글</div>
-                            <div style="font-weight:bold;">instagram_user 댓글</div>
-                            <div style="font-size:10px">5시간 전</div> <!--작성 시간-->
-
+                        <div>
+                            <hr> <!--구분선-->
                         </div>
-                    </div>
-                    <div>
-                        <hr> <!--구분선-->
-                    </div>
-                    <!--Input Comment-->
-                    <div style="
+                        <!--Input Comment-->
+                        <div style="
                     display: flex;
                     flex-direction: row;
                     padding : 0 15px 15px  15px;
                     ">
-                        <div style="
+                            <div style="
                          margin-top:-15px;
                          font-size: 30px;
                          ">☺
-                        </div>
-                        <input type="text" placeholder="댓글달기..."
-                               style="
+                            </div>
+                            <input type="text" placeholder="댓글달기..."
+                                   style="
                            display:block;
                            width:400px;
                            height:30px;
@@ -339,7 +345,7 @@
                            outline:none;
                            caret-color: black;">
 
-                        <button style="
+                            <button style="
                             background-color: white;
                             border-style: none;
                             color: lightskyblue;
@@ -347,24 +353,24 @@
                             opacity:70%;
                             outline:none;
                             ">게시
-                        </button> <!--입력하면 글자 색이 바뀌게-->
+                            </button> <!--입력하면 글자 색이 바뀌게-->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--left board (end)-->
+                <!--left board (end)-->
 
-        {% endfor %} <!-- for-loop을 통해서 피드 데이터베이스에서 반복적으로 가져옴-->
-
-
-    </div><!--Left Feeds div (loop) (end)-->
+            {% endfor %} <!-- for-loop을 통해서 피드 데이터베이스에서 반복적으로 가져옴-->
 
 
-</div><!--Background (end)-->
+        </div><!--Left Feeds div (loop) (end)-->
 
+
+    </div><!--Background (end)-->
+
+</div> <!--모달제외한 메인화면 전체 (끝)-->
 
 <!--Modal pop-up-->
-<!--<body style="overflow: hidden">-->
-<div id = "modal_wrap">
+<div id="modal_wrap">
     <!--close button-->
     <div>
                 <span id="modal_close" class="material-symbols-outlined" style="
@@ -373,12 +379,21 @@
                                                                         font-size: 30px;
                                                                         color: white;
                                                                         top: 90px;
-                                                                        right: 25px;
+                                                                        right: 40px;
                                                                         cursor: pointer;
                                                                         z-index: 1000;
 
-                                                                          }">close </span> </div>
+                                                                          }">close </span></div>
 
+    <!--modal_overaly + modal_pop-up scroll bar -->
+    <div id="modal_scrollbar" style=" overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    position: fixed;
+    /* overflow: visible; */
+    z-index: 15; "></div> <!--modal_overaly + modal_pop-up scroll bar (end)-->
     <!--Modal pop-up Background-->
     <div class="modal_overlay" style="
                                display: none;
@@ -461,40 +476,53 @@
     </div><!--Modal pop-up Background (end)-->
 
 
-</div><!--Modal pop-up (end)-->
-
+</div><!--modal_overaly + modal_pop-up (end)-->
 
 <script>
     //add_box를 눌러서 모달팝업 띄우기
     $('#nav_bar_add_box').click(function () {
+
         $('.modal_overlay').css({
             display: 'flex'
+
         }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨 // 피드 아래 보고있다가 맨 위로 올라가서 모달창 보이도록 수정하기.
+        $('#modal_scrollbar').css({
+            display: 'flex'
+
+        })
+
+
         $("#modal_close").css({
-            display:'flex'
+            display: 'flex'
         })
         $(document.body).css({
-            overflow: 'hidden',
-            scrollWidth:'16px'
-        })//스크롤 없어지게 하기 위해 body에 overflow를 hidden으로 (첫 화면만큼의 크기만 살아있게 됨)
+            overflow: 'hidden'
+        })
+
 
     });
 
     <!--x표시를 눌러서 모달팝업 닫기-->
-    $('#modal_close').click(function() {
+    $('#modal_close').click(function () {
         $('.modal_overlay').css({
-            display:'none'
+            display: 'none'
         })
         $("#modal_close").css({
-            display:'none'
+            display: 'none'
         })
         $(document.body).css({
-            overflow:'auto'
+            overflow: 'auto'
+        })
+
+        $('#modal_scrollbar').css({
+            display: 'none'
+
         })
     });
 
 
 </script>
+
 
 </body>
 
