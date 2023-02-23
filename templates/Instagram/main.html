@@ -21,6 +21,22 @@
     z-index 15   modal_close
     z-index 15   modal_scrollbar
     -->
+
+
+    <style>
+        .button_no_background:hover {
+            color: #063C6E  !important ;
+            opacity: 1 !important;
+        }
+        .text_no_background:hover {
+            color : gray
+        }
+        .button_background:hover {
+            background-color: #1877F2 !important;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -99,7 +115,6 @@
         </div>
     </nav>
 
-
     <!--Background-->
     <div style="
     padding-top:100px;
@@ -156,9 +171,11 @@
                          "><br>HM Park
                             </div>
                         </div>
-                        <button style="
+
+
+                        <button  class="button_no_background" style="
                         margin-left: auto;
-                        background-color: #fafafa;
+                        background: #fafafa;
                         border-style: none;
                         font-weight: bold;
                         color: dodgerblue;
@@ -178,7 +195,7 @@
                      ">회원님을 위한 추천
                         </div>
 
-                        <div style="
+                        <div class ="text_no_background" style="
                      margin-left: auto;
                      font-weight: bold;
                      ">모두 보기
@@ -221,7 +238,7 @@
                          "><br>user name
                             </div>
                         </div>
-                        <button style="margin-left: auto;
+                        <button class="button_no_background" style="margin-left: auto;
                 background-color: #fafafa;
                 border-style: none;
                 font-weight: bold;
@@ -345,7 +362,7 @@
                            outline:none;
                            caret-color: black;">
 
-                            <button style="
+                            <button  class="button_no_background"  style="
                             background-color: white;
                             border-style: none;
                             color: lightskyblue;
@@ -378,33 +395,30 @@
                                                                         position: fixed;
                                                                         font-size: 30px;
                                                                         color: white;
-                                                                        top: 90px;
+                                                                        top: 20px;
                                                                         right: 40px;
                                                                         cursor: pointer;
                                                                         z-index: 1000;
 
                                                                           }">close </span></div>
 
-    <!--modal_overaly + modal_pop-up scroll bar -->
-    <div id="modal_scrollbar" style=" overflow-y: scroll;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: none;
-    position: fixed;
-    /* overflow: visible; */
-    z-index: 15; "></div> <!--modal_overaly + modal_pop-up scroll bar (end)-->
+
+
+  "></div> <!--modal_overaly + modal_pop-up scroll bar (end)-->
     <!--Modal pop-up Background-->
     <div class="modal_overlay" style="
-                               display: none;
-                               position: fixed;
-                               justify-content: center;
-                               width: 100%;
-                               height: 100%;
-                               background: rgba(0, 0, 0, 0.3);
-                               backdrop-filter: blur(50px);
-                               align-items: center;
-                               top: 0;">
+                                   display: none;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    align-items: center;
+    top: 0px;
+    z-index: 15;
+    overflow-y: scroll;
+">
 
         <!--Modal pop-up (itself)-->
         <div class="modal_window" style="
@@ -459,7 +473,7 @@
                 width: 100%;
                 bottom: 100px;
                 }">
-                <button style="
+                <button class="button_background" style="
                         width: 150px;
                         height: 35px;
                         background-color: dodgerblue;
@@ -479,18 +493,21 @@
 </div><!--modal_overaly + modal_pop-up (end)-->
 
 <script>
+    $('.button').css('background-color','red').hover(
+    function(){
+        $(this).css('background-color','aqua');
+    },
+    function(){
+        $(this).css('background-color','red');
+    });
+
+
     //add_box를 눌러서 모달팝업 띄우기
     $('#nav_bar_add_box').click(function () {
 
         $('.modal_overlay').css({
             display: 'flex'
-
         }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨 // 피드 아래 보고있다가 맨 위로 올라가서 모달창 보이도록 수정하기.
-        $('#modal_scrollbar').css({
-            display: 'flex'
-
-        })
-
 
         $("#modal_close").css({
             display: 'flex'
@@ -498,8 +515,6 @@
         $(document.body).css({
             overflow: 'hidden'
         })
-
-
     });
 
     <!--x표시를 눌러서 모달팝업 닫기-->
@@ -514,10 +529,7 @@
             overflow: 'auto'
         })
 
-        $('#modal_scrollbar').css({
-            display: 'none'
 
-        })
     });
 
 
