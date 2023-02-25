@@ -208,9 +208,9 @@
                     <!--Recommend Another Users -->
                     <!--Recommended user-->
                     <div style="
-                 display: flex;
-                 flex-direction: row;
-                 align-items:center;
+    display: flex;
+    flex-direction: row;
+
                  ">
                         <div class="box2" style="
                                   width: 30px;
@@ -446,25 +446,21 @@
     align-items: center;
     display: flex;
     flex-direction: row;">
-            <div style="display: flex;
+                <div style="display: flex;
     width: 100%;
     /* justify-content: center; */
     /* height: 45px; */
     align-items: center;">
-                <div style="    display: flex;
+                    <div style="    display: flex;
     width: 100%;
     position: absolute;
     justify-content: center;
     font-weight: bold;
                 ">새 게시물 만들기
+                    </div>
                 </div>
-            </div>
-            <div style="
+                <div class="button_no_background" style="
                         display: flex;
-    /* flex-direction: row-reverse; */
-    /* justify-content: center; */
-    /* margin-top: 10px; */
-    /* margin-bottom: -5px; */
     margin-right: 15px;
     border-style: none;
     color: dodgerblue;
@@ -474,20 +470,21 @@
     align-items: center;
     width: 72px;
     font-size: 15px;
+    z-index:150;
 }">공유하기
 
-            </div>
-        </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
-        <!--구분선-->
-        <div style="    margin-top: -15px;">
-            <hr>
-        </div>   <!--구분선 (end)-->
-    </div>
+                </div>
+            </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
+            <!--구분선-->
+            <div style="    margin-top: -15px;">
+                <hr>
+            </div>   <!--구분선 (end)-->
+        </div>
 
-    <!--img_upload_space+ 코멘트 남기는 부분 (시작)-->
-    <div style="display: flex; flex-direction: row;">
-        <!--img_upload_space 시작-->
-        <div class='img_upload_space' style="
+        <!--img_upload_space+ 코멘트 남기는 부분 (시작)-->
+        <div style="display: flex; flex-direction: row;">
+            <!--img_upload_space 시작-->
+            <div class='img_upload_space' style="
    display: flex;
     flex-direction: row;
     position: absolute;
@@ -498,57 +495,118 @@
     top: 46px;
     border-radius: 0 0 0 20px;
     z-index: 140;
-    background-color: aqua;
+    border-right:solid 0.5px lightgray;
 "></div><!--img_upload_space 끝-->
-        <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
-        <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
-        <!--창 작아질 때 모달창도 작아지게하려면?-->
-        <div style="     display: flex;
+            <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
+            <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
+            <!--창 작아질 때 모달창도 작아지게하려면?-->
+            <div style="    display: flex;
     flex-direction: column;
     width: 270px;
-    height: 454px;
-    background-color: darkkhaki;
+    height: 453px;
+    background-color: white;
     position: absolute;
     margin-left: 454px;
-    top: 46px;
+    top: 47px;
+    padding: 15px;
     border-radius: 0 0 20px 0;">
-            <!--작성자 정보(프로필사진,아이디) (시작)-->
-                <div style="display: flex; flex-direction: row;">
-                    <div>
-                    writer_profile
-                    </div>
-                    <div>writer_id</div>
-                </div><!--작성자 정보(프로필사진,아이디) (끝)-->
+                <!--작성자 정보(프로필사진,아이디) (시작)-->
+                <div style="display: flex; flex-direction: column;">
+                    <!--Recommended user-->
+                    <div style="margin-bottom:15px;">
+                        <div style="
+                 display: flex;
+                 flex-direction: row;
+                     height: 30px;
+    align-items: baseline;
+}
+                 ">
 
-                <div style="display:flex; flex-direction: column;">
-                <div>문구 입력....</div>
-                    <div style="display: flex; flex-direction: row;" ></div>
-                    <div>이모티콘</div><div>글자 수</div>
+                            <div class="box2" style="
+                                  width: 30px;
+                                  height: 30px;
+                                  border-radius: 70%;
+                                  overflow: hidden;"
+                            >
+                                <img class="profile2" style="
+                                          width: 100%;
+                                          margin-top: 0px;
+                                          object-fit: cover;"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
+                            </div>
+                            <div style="
+                     display: flex;
+                     flex-direction: column;
+                     margin-left: 10px
+                     ">
+                                <div style="
+                         margin-bottom:-20px;
+                         font-size: 14px;
+                         font-weight: bold;"
+                                >user
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--작성자 정보(프로필사진,아이디) (끝)-->
+
+                    <div style="display:flex; flex-direction: column;">
+                        <div>
+                                <textarea placeholder="문구 입력..." style="color: gray; resize:none;
+    width: 240px;border-style: none;outline:none;
+    height: 140px;"></textarea></div>
+                        <div style=" display: flex;
+    flex-direction: row;
+    /* padding: 0 15px 15px 15px; */
+    width: 240px;
+    height: 23px;
+    align-items: flex-end;">
+                            <div style="margin-top: -20px; color: gray;
+    font-size: 30px;
+    position: absolute;
+    top: 210px;
+    left: 10px; ">☺
+                            </div>
+                            <div style="font-size: 12px;
+    left: 212px;
+    position: absolute;
+    margin-right: 15px;">글자 수
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--구분선-->
-            <div>
-                <hr>
-            </div>   <!--구분선 (end)-->
+                <div>
+                    <hr style="    margin: 10px -14px 10px -14px;
+    height: 0.5px;">
+                </div>   <!--구분선 (end)-->
                 <div>위치 추가</div>
                 <!--구분선-->
-            <div>
-                <hr>
-            </div>   <!--구분선 (end)-->
+                <div>
+                    <hr style="    margin: 10px -14px 10px -14px;
+    height: 0.5px;">
+                </div>   <!--구분선 (end)-->
                 <div>
                     접근성
                 </div>
                 <!--구분선-->
-            <div>
-                <hr>
-            </div>   <!--구분선 (end)-->
+                <div>
+                    <hr style="    margin: 10px -14px 10px -14px;
+    height: 0.5px;">
+                </div>   <!--구분선 (end)-->
                 <div>고급 설정</div>
-        </div>
-        <!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
+                <!--구분선-->
+                <div>
+                    <hr style="    margin: 10px -14px 10px -14px;
+    height: 0.5px;">
+                </div>   <!--구분선 (end)-->
+            </div>
 
-    </div><!--Second Modal pop-up (itself) (end)-->
+            <!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
+
+        </div><!--Second Modal pop-up (itself) (end)-->
 
 
-</div><!--modal_overaly + modal_pop-up (end)-->
+    </div><!--modal_overaly + modal_pop-up (end)-->
 </div>
 
 <script>
