@@ -423,21 +423,25 @@
     overflow-y: scroll;
 ">
 
-    <!--Modal pop-up (itself)-->
-    <div class="modal_window" style="
+    <!--Second Modal pop-up (itself)-->
+    <div id="second_modal" class="modal_window" style="
                                     display: flex;
                                     flex-direction: column;
                                     position: absolute;
-                                    width: 500px;
+                                    width: 600px;
                                     height: 500px;background-color: white;
                                     border-radius: 20px;
                                     z-index: 100000;" }>
-        <div id="modal_white_zone" style=   " width: 100%;
+        <div id="modal_white_zone" style=" width: 100%;
     height: 45px;
     background-color: white;
     /* opacity: 0.4; */
     border-radius: 20px 20px 0 0;">
-        <div style="
+            <!--새 게시물 만들기+공유하기 버튼 (시작)-->
+            <!--아래 div 수정하기-->
+            <div style="display: flex;
+                        justify-content: space-between;">
+                <div style="
                  display:flex;
                  flex-direction: row;
                  justify-content: center;
@@ -445,14 +449,29 @@
                  margin-bottom: -5px;
                  font-weight: bold;
                 ">새 게시물 만들기
+                </div>
+                <div style="
+                 display:flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 margin-top: 10px;
+                 margin-bottom: -5px;
+                 margin-right:15px;
+                 border-style: none;
+                 color: dodgerblue;
+                 outline:none;
+                 font-weight: bold;
+                ">공유하기
+                </div>
+            </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
+            <!--구분선-->
+            <div>
+                <hr>
+            </div>   <!--구분선 (end)-->
         </div>
-        <!--구분선-->
-        <div>
-            <hr>
-        </div>   <!--구분선 (end)-->
-</div>
 
-        <div>
+        <!--img_upload_space+ 코멘트 남기는 부분 (시작)-->
+        <div style="display: flex; flex-direction: row;">
             <!--img_upload_space 시작-->
             <div class='img_upload_space' style="
     display: flex;
@@ -467,59 +486,53 @@
     z-index:140;
 
 "></div><!--img_upload_space 끝-->
-            <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 시작-->
-            <div id="except_img_upload_space" style="display:flex">
-                <!--Icon div-->
-                <div id="modal_upload_icon" style="display: flex;
-    height: 240px;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    /* align-items: baseline; */
-    justify-content: center;
-    padding-top: 87px;
-}">
-                    <span class="material-symbols-outlined"
-                          style="font-size: 150px;margin-bottom:70px">photo_library</span>
-                </div><!--Icon div (end)-->
-                <div style="
-                        font-size: 20px;
-                        display: flex;
-                        position: absolute;
-                        flex-direction: row;
-                        justify-content: center;
-                        width: 100%;
-                        bottom: 150px;">사진과 동영상을 여기에 끌어다 놓으세요
+            <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
+            <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
+            <!--창 작아질 때 모달창도 작아지게하려면?-->
+            <div style="display:flex; flex-direction: column; width:50%; height: 454px;">
+                <!--작성자 정보(프로필사진,아이디) (시작)-->
+                <div style="display: flex; flex-direction: row;">
+                    <div>
+                    writer_profile
+                    </div>
+                    <div>writer_id</div>
+                </div><!--작성자 정보(프로필사진,아이디) (끝)-->
+
+                <div style="display:flex; flex-direction: column;">
+                <div>문구 입력....</div>
+                    <div style="display: flex; flex-direction: row;" ></div>
+                    <div>이모티콘</div><div>글자 수</div>
                 </div>
-                <!--Button div-->
-                <div style="
-                display: flex;
-                position: absolute;
-                flex-direction: row;
-                justify-content: center;
-                width: 100%;
-                bottom: 100px;
-                }">
-                    <button class="button_background" style="
-                        width: 150px;
-                        height: 35px;
-                        background-color: dodgerblue;
-                        border-style: none;
-                        border-radius: 8px;
-                        font-weight: bold;
-                        color: white;
-                        z-index:150;
-                        ">컴퓨터에서 선택
-                    </button>
-                </div><!--Button div (end)-->
-            </div> <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 끝-->
-        </div><!--Modal pop-up (itself) (end)-->
-
-    </div><!--Modal pop-up Background (end)-->
+                <!--구분선-->
+            <div>
+                <hr>
+            </div>   <!--구분선 (end)-->
+                <div>위치 추가</div>
+                <!--구분선-->
+            <div>
+                <hr>
+            </div>   <!--구분선 (end)-->
+                <div>
+                    접근성
+                </div>
+                <!--구분선-->
+            <div>
+                <hr>
+            </div>   <!--구분선 (end)-->
+                <div>고급 설정</div>
 
 
-</div><!--modal_overaly + modal_pop-up (end)-->
+            </div>
+            <!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
 
+        </div><!--Second Modal pop-up (itself) (end)-->
+
+
+
+
+
+    </div><!--modal_overaly + modal_pop-up (end)-->
+</div>
 <script>
 
 
