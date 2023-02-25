@@ -426,71 +426,93 @@
     <!--Second Modal pop-up (itself)-->
     <div id="second_modal" class="modal_window" style="
                                     display: flex;
-                                    flex-direction: column;
-                                    position: absolute;
-                                    width: 600px;
-                                    height: 500px;background-color: white;
-                                    border-radius: 20px;
-                                    z-index: 100000;" }>
-        <div id="modal_white_zone" style=" width: 100%;
+    flex-direction: column;
+    position: absolute;
+    width: 724px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 100000;
+}" }>
+        <div id="modal_white_zone" style="     width: 100%;
     height: 45px;
     background-color: white;
     /* opacity: 0.4; */
     border-radius: 20px 20px 0 0;">
             <!--새 게시물 만들기+공유하기 버튼 (시작)-->
             <!--아래 div 수정하기-->
+            <div style="height: 45px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;">
             <div style="display: flex;
-                        justify-content: space-between;">
-                <div style="
-                 display:flex;
-                 flex-direction: row;
-                 justify-content: center;
-                 margin-top: 10px;
-                 margin-bottom: -5px;
-                 font-weight: bold;
+    width: 100%;
+    /* justify-content: center; */
+    /* height: 45px; */
+    align-items: center;">
+                <div style="    display: flex;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    font-weight: bold;
                 ">새 게시물 만들기
                 </div>
-                <div style="
-                 display:flex;
-                 flex-direction: row;
-                 justify-content: center;
-                 margin-top: 10px;
-                 margin-bottom: -5px;
-                 margin-right:15px;
-                 border-style: none;
-                 color: dodgerblue;
-                 outline:none;
-                 font-weight: bold;
-                ">공유하기
-                </div>
-            </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
-            <!--구분선-->
-            <div>
-                <hr>
-            </div>   <!--구분선 (end)-->
-        </div>
+            </div>
+            <div style="
+                        display: flex;
+    /* flex-direction: row-reverse; */
+    /* justify-content: center; */
+    /* margin-top: 10px; */
+    /* margin-bottom: -5px; */
+    margin-right: 15px;
+    border-style: none;
+    color: dodgerblue;
+    outline: none;
+    font-weight: bold;
+    /* position: absolute; */
+    align-items: center;
+    width: 72px;
+    font-size: 15px;
+}">공유하기
 
-        <!--img_upload_space+ 코멘트 남기는 부분 (시작)-->
-        <div style="display: flex; flex-direction: row;">
-            <!--img_upload_space 시작-->
-            <div class='img_upload_space' style="
-    display: flex;
+            </div>
+        </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
+        <!--구분선-->
+        <div style="    margin-top: -15px;">
+            <hr>
+        </div>   <!--구분선 (end)-->
+    </div>
+
+    <!--img_upload_space+ 코멘트 남기는 부분 (시작)-->
+    <div style="display: flex; flex-direction: row;">
+        <!--img_upload_space 시작-->
+        <div class='img_upload_space' style="
+   display: flex;
     flex-direction: row;
     position: absolute;
     justify-content: center;
-    width: 100%;
+    width: 454px;
     height: 454px;
     align-items: center;
     top: 46px;
-    border-radius: 0 0 20px 20px;
-    z-index:140;
-
+    border-radius: 0 0 0 20px;
+    z-index: 140;
+    background-color: aqua;
 "></div><!--img_upload_space 끝-->
-            <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
-            <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
-            <!--창 작아질 때 모달창도 작아지게하려면?-->
-            <div style="display:flex; flex-direction: column; width:50%; height: 454px;">
-                <!--작성자 정보(프로필사진,아이디) (시작)-->
+        <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
+        <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
+        <!--창 작아질 때 모달창도 작아지게하려면?-->
+        <div style="     display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 454px;
+    background-color: darkkhaki;
+    position: absolute;
+    margin-left: 454px;
+    top: 46px;
+    border-radius: 0 0 20px 0;">
+            <!--작성자 정보(프로필사진,아이디) (시작)-->
                 <div style="display: flex; flex-direction: row;">
                     <div>
                     writer_profile
@@ -520,19 +542,15 @@
                 <hr>
             </div>   <!--구분선 (end)-->
                 <div>고급 설정</div>
+        </div>
+        <!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
+
+    </div><!--Second Modal pop-up (itself) (end)-->
 
 
-            </div>
-            <!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
-
-        </div><!--Second Modal pop-up (itself) (end)-->
-
-
-
-
-
-    </div><!--modal_overaly + modal_pop-up (end)-->
+</div><!--modal_overaly + modal_pop-up (end)-->
 </div>
+
 <script>
 
 
@@ -543,7 +561,7 @@
             display: 'flex'
         }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨 // 피드 아래 보고있다가 맨 위로 올라가서 모달창 보이도록 수정하기.
 
-        $("#modal_close").css({
+        $(" #modal_close").css({
             display: 'flex'
         })
         $(document.body).css({
@@ -599,7 +617,7 @@
     function uploadFiles(e) {
         e.stopPropagation();
         e.preventDefault();
-//        dragOver(e); //1
+        // dragOver(e); //1
 
         e.dataTransfer = e.originalEvent.dataTransfer; //2
         var files = e.target.files || e.dataTransfer.files;
