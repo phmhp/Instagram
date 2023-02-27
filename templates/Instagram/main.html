@@ -676,7 +676,7 @@
 
                     <div style="display:flex; flex-direction: column;">
                         <div>
-                                <textarea placeholder="문구 입력..." style="color: gray; resize:none;
+                                <textarea id= "input_feed_content" placeholder="문구 입력..." style="color: gray; resize:none;
     width: 240px;border-style: none;outline:none;
     height: 140px;"></textarea></div>
                         <div style=" display: flex;
@@ -856,10 +856,10 @@ let files;
 
 
     $("#feed_create_button").click(function(){
-        alert("공유하기를 누르셨습니다. 파일명은 "+files[0].name +"입니다.")
+        alert("공유하기를 누르셨습니다. 작성한 내용은 "+$("#input_feed_content").val() +"입니다.")
 
-        {#let image=;#}
-        {#let content=;#}
+        let image=files[0].name;
+        let content=$("#input_feed_content").val();
         {#let userid=;#}
         {#let profile_image=;#}
 
