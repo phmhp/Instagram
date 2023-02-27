@@ -154,8 +154,8 @@
                                             width: 100%;
                                             height: 100%;
                                             object-fit: cover;"
-                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
-                        </div>
+                                 src="http://file3.instiz.net/data/cached_img/upload/2020/06/24/22/ff4016915147760066745c00391a6f0c.jpg">
+                           </div>
 
                         <div style="
                      display: flex;
@@ -858,13 +858,43 @@ let files;
     $("#feed_create_button").click(function(){
         alert("공유하기를 누르셨습니다. 작성한 내용은 "+$("#input_feed_content").val() +"입니다.")
 
-        let image=files[0].name;
-        let content=$("#input_feed_content").val();
-        {#let userid=;#}
-        {#let profile_image=;#}
+        let file=files; //실제 이미지 파일
+        let image=files[0].name; //이미지 파일의 이름
+        let content=$("#input_feed_content").val(); //작성한 내용
+        let user_id='phmhp'; //추후에 업데이트 구현
+        let profile_image='http://file3.instiz.net/data/cached_img/upload/2020/06/24/22/ff4016915147760066745c00391a6f0c.jpg'; //추후에 업데이트 구현
 
+        let fd = new FormData(); //FormData형태로 데이터를 가져와야함
 
-    })
+        fd.append('file',file);
+        fd.append('image',image);
+        fd.append('content',content);
+        fd.append('user_id',user_id);
+        fd.append('profile_imgae',profile_image);
+
+        //ajax (jquery에서는 $.ajax();형태로 사용할 수 있다.
+        //url:어떤 url을 호출할건지
+        //data:넘기는 데이터 (폼데이터로 보내기 위해 위에서 선언한 fd)
+        //method:http메소드를 말함, restAPI에는 get,post 이외에도 put,delete ...
+        //success,error,complete는 callback함수
+        $.ajax({
+            url: "/content/upload",
+            data: fd,
+            method:"POST",
+            processData:false,
+            contentType:false,
+            success: function(data){
+                console.log('성공');
+            },
+            error:function(request,status,error) {
+                console.log("에러");
+            },
+            complete: function(){
+                console.log("완료");
+            }
+
+        })
+    });
 </script>
 
 

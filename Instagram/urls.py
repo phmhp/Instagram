@@ -18,10 +18,9 @@ import sys
 sys.path.append(r'C:\toyProject\CreateInstagram\Instagram\Instagram')
 from django.contrib import admin
 from django.urls import path
-
-from content.views import Main #다른 폴더의 소스를 참조하는 거라서 . 이 필요
-
+from content.views import Main,UploadFeed    #다른 폴더의 소스를 참조하는 거라서 . 이 필요
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Main.as_view()) #이렇게 하면 content.views.py에 있는 Main클래스가 실행이 될 것. (이후 동작에 대한 설명은 Main클래스에 메모해놓음)
+    path('main/',Main.as_view()), #이렇게 하면 content.views.py에 있는 Main클래스가 실행이 될 것. (이후 동작에 대한 설명은 Main클래스에 메모해놓음)
+    path('content/upload', UploadFeed.as_view())
 ]
