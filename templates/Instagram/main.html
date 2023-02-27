@@ -41,7 +41,7 @@
 
 </head>
 
-<body>
+<body style="overflow-x:hidden">
 <div id="try_element"><!--모달제외한 메인화면 전체-->
 
     <!--nav bar-->
@@ -423,9 +423,132 @@
     overflow-y: scroll;
 ">
 
+
+    <!--First Modal pop-up (itself)-->
+    <div id="first_modal" c lass="modal_window" style="
+                                    display: none;
+                                    flex-direction: column;
+                                    position: absolute;
+                                    width: 500px;
+                                    height: 500px;background-color: white;
+                                    border-radius: 20px;
+                                    z-index: 100000;" }>
+       <div id="modal_white_zone" style="     width: 100%;
+    height: 45px;
+    background-color: white;
+    /* opacity: 0.4; */
+    border-radius: 20px 20px 0 0;">
+            <!--새 게시물 만들기+공유하기 버튼 (시작)-->
+            <!--아래 div 수정하기-->
+            <div style="height: 45px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;">
+                <div style="display: flex;
+    width: 100%;
+    /* justify-content: center; */
+    /* height: 45px; */
+    align-items: center;">
+                    <div style="    display: flex;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    font-weight: bold;
+                ">새 게시물 만들기
+                    </div>
+                </div>
+                <div id= "after_img_upload_next" class="button_no_background" style="
+                        display: none;
+    border-style: none;
+    color: dodgerblue;
+    outline: none;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 150;
+    width: 100px;
+    flex-direction: row-reverse;
+    margin-right: 15px;
+}">다음
+
+                </div>
+            </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
+            <!--구분선-->
+            <div style="    margin-top: -15px;">
+                <hr>
+            </div>   <!--구분선 (end)-->
+        </div>
+
+        <div>
+            <!--img_upload_space 시작-->
+            <div class='img_upload_space' style="
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 454px;
+    align-items: center;
+    top: 46px;
+    border-radius: 0 0 20px 20px;
+    z-index:140;
+    background-repeat: no-repeat;
+    background-position: center;
+
+"></div><!--img_upload_space 끝-->
+            <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 시작-->
+            <div id="except_img_upload_space" style="display:flex">
+                <!--Icon div-->
+                <div id="modal_upload_icon" style="display: flex;
+    height: 240px;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    /* align-items: baseline; */
+    justify-content: center;
+    padding-top: 87px;
+}">
+                    <span class="material-symbols-outlined"
+                          style="font-size: 150px;margin-bottom:70px">photo_library</span>
+                </div><!--Icon div (end)-->
+                <div style="
+                        font-size: 20px;
+                        display: flex;
+                        position: absolute;
+                        flex-direction: row;
+                        justify-content: center;
+                        width: 100%;
+                        bottom: 150px;">사진과 동영상을 여기에 끌어다 놓으세요
+                </div>
+                <!-- 추가구현할 부분 Button div
+                <div style="
+                display: flex;
+                position: absolute;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                bottom: 100px;
+                }">
+                    <button class="button_background" style="
+                        width: 150px;
+                        height: 35px;
+                        background-color: dodgerblue;
+                        border-style: none;
+                        border-radius: 8px;
+                        font-weight: bold;
+                        color: white;
+                        z-index:150;
+                        ">컴퓨터에서 선택
+                    </button>
+                </div>   Button div (end)-->
+            </div> <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 끝-->
+        </div><!--Modal pop-up (itself) (end)-->
+
+    </div><!--First Modal pop-up Background (end)-->
+
     <!--Second Modal pop-up (itself)-->
     <div id="second_modal" class="modal_window" style="
-                                    display: flex;
+                                    display: none;
     flex-direction: column;
     position: absolute;
     width: 724px;
@@ -496,6 +619,8 @@
     border-radius: 0 0 0 20px;
     z-index: 140;
     border-right:solid 0.5px lightgray;
+    background-repeat: no-repeat;
+    background-position: center;
 "></div><!--img_upload_space 끝-->
             <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
             <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
@@ -617,8 +742,10 @@
 
         $('.modal_overlay').css({
             display: 'flex'
-        }) //네비바의 add_box버튼 누르면 modal_overlay클래스 값이 display none에서 flex로 되면서 모달창이 나타나게 됨 // 피드 아래 보고있다가 맨 위로 올라가서 모달창 보이도록 수정하기.
-
+        })
+        $("#first_modal").css({
+            display: "flex"
+        })
         $(" #modal_close").css({
             display: 'flex'
         })
@@ -692,22 +819,38 @@
             return;
         }
         if (files[0].type.match(/image.*/)) {
-            $(e.target).css({
+            $('.img_upload_space').css({
                 "background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
                 "outline": "none",
-                "background-size": "100% 100%"
+                "background-size": "100% "
+            });
+            $("#after_img_upload_next").css({
+                "display":"flex"
+            });
 
 
-            });
-            $("#except_img_upload_space").css({
-                "display": "none"
-            });
         } else {
             alert('이미지가 아닙니다.');
             return;
         }
 
+
     }
+
+      $("#after_img_upload_next").click(function () {
+
+          $("#except_img_upload_space").css({
+              "display": "none"
+          });
+
+          //이미지 업로드 이후 다음버튼을 눌렀을 때
+            $("#first_modal").css({
+               "display": "none"
+           })
+           $("#second_modal").css({
+              'display': 'flex'
+           })
+      });
 </script>
 
 
