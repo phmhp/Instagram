@@ -582,7 +582,7 @@
                 ">새 게시물 만들기
                     </div>
                 </div>
-                <div class="button_no_background" style="
+                <div id= "feed_create_button" class="button_no_background" style="
                         display: flex;
     margin-right: 15px;
     border-style: none;
@@ -735,6 +735,8 @@
 </div>
 
 <script>
+//files를 어디서나 쓸 수 있게 전역변수 선언
+let files;
 
 
     //add_box를 눌러서 모달팝업 띄우기
@@ -805,7 +807,7 @@
         // dragOver(e); //1
 
         e.dataTransfer = e.originalEvent.dataTransfer; //2
-        var files = e.target.files || e.dataTransfer.files;
+        files = e.target.files || e.dataTransfer.files;
 
         if (files.length > 1) {
             alert('하나만 올릴 수 있습니다.');
@@ -851,6 +853,18 @@
               'display': 'flex'
            })
       });
+
+
+    $("#feed_create_button").click(function(){
+        alert("공유하기를 누르셨습니다. 파일명은 "+files[0].name +"입니다.")
+
+        {#let image=;#}
+        {#let content=;#}
+        {#let userid=;#}
+        {#let profile_image=;#}
+
+
+    })
 </script>
 
 
