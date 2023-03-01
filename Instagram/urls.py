@@ -24,3 +24,7 @@ urlpatterns = [
     path('main/',Main.as_view()), #이렇게 하면 content.views.py에 있는 Main클래스가 실행이 될 것. (이후 동작에 대한 설명은 Main클래스에 메모해놓음)
     path('content/upload', UploadFeed.as_view())
 ]
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #media 폴더의 파일들을 조회할 수 있도록 해주는 부분임. (=이 부분이 없으면 파일조회가 불가능하다고 함)

@@ -858,7 +858,7 @@ let files;
     $("#feed_create_button").click(function(){
         alert("공유하기를 누르셨습니다. 작성한 내용은 "+$("#input_feed_content").val() +"입니다.")
 
-        let file=files; //실제 이미지 파일
+        let file=files[0]; //실제 이미지 파일
         let image=files[0].name; //이미지 파일의 이름
         let content=$("#input_feed_content").val(); //작성한 내용
         let user_id='phmhp'; //추후에 업데이트 구현
