@@ -19,12 +19,14 @@ from Instagram.settings import MEDIA_URL, MEDIA_ROOT
 
 sys.path.append(r'C:\toyProject\CreateInstagram\Instagram\Instagram')
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from content.views import Main,UploadFeed    #다른 폴더의 소스를 참조하는 거라서 . 이 필요
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/',Main.as_view()), #이렇게 하면 content.views.py에 있는 Main클래스가 실행이 될 것. (이후 동작에 대한 설명은 Main클래스에 메모해놓음)
-    path('content/upload', UploadFeed.as_view())
+    path('content/',include('content.urls')),
+    path('user/',include('user.urls'))
+
 ]
 from django.conf import settings
 from django.conf.urls.static import static
