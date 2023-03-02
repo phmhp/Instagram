@@ -29,9 +29,7 @@ class UploadFeed(APIView):
         #여기까지 하고나면 파일이 저장이 됨.
 
 
-
-        file = uuid_name #랜덤한 값으로 부여된 파일 이름
-        image = request.data.get('image')
+        image = uuid_name #랜덤한 값으로 부여된 파일 이름
         content = request.data.get('content')
         user_id = request.data.get("user_id")
         profile_image = request.data.get('profile_image')

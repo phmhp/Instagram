@@ -15,6 +15,8 @@ Including another URLconf
 """
 import sys
 
+from Instagram.settings import MEDIA_URL, MEDIA_ROOT
+
 sys.path.append(r'C:\toyProject\CreateInstagram\Instagram\Instagram')
 from django.contrib import admin
 from django.urls import path
@@ -27,4 +29,4 @@ urlpatterns = [
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #media 폴더의 파일들을 조회할 수 있도록 해주는 부분임. (=이 부분이 없으면 파일조회가 불가능하다고 함)
+urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT) #media 폴더의 파일들을 조회할 수 있도록 해주는 부분임. (=이 부분이 없으면 파일조회가 불가능하다고 함)
