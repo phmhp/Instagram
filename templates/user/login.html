@@ -12,17 +12,22 @@
 
 </head>
 <body>
-<div style = "display: flex; flex-direction: row; justify-content: center">
-    <div style="    border: solid 1px lightgray;
+<div style="    display: flex;
+    flex-direction: row;
+    justify-content: center; ">
+    <div style="      display: flex;
+    flex-direction: column;
+    height: 100vh;  ">
+        <div style="    border: solid 1px lightgray;
     padding: 15px;
     margin-top: 40px;
     width: 350px;
-    height: 580px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;">
-        <div>
-            <img src = "https://fontmeme.com/images/instagram-new-logo.png" style="    /* vertical-align: middle; */
+            <div>
+                <img src="https://fontmeme.com/images/instagram-new-logo.png" style="    /* vertical-align: middle; */
     /* width: 70%; */
     /* display: flex; */
     /* justify-content: center; */
@@ -30,10 +35,10 @@
     width: 100%;
     padding: 20px 60px 20px 60px;
 }"
-                 >
-        </div>
-        <div>
-            <input type="text" placeholder="휴대폰 번호 또는 이메일 주소" style="margin: 3px;
+                >
+            </div>
+            <div>
+                <input type="text" placeholder="휴대폰 번호 또는 이메일 주소" style="margin: 3px;
     /* font-family: inherit; */
     font-size: 12px;
     line-height: 35px;
@@ -47,8 +52,8 @@
     border-style: solid;
     border-radius: 2px;
     border-width: 1px;">
-        </div>
-        <div><input type="password" placeholder="비밀번호" style="margin: 3px;
+            </div>
+            <div><input type="password" placeholder="비밀번호" style="margin: 3px;
     /* font-family: inherit; */
     font-size: 12px;
     line-height: 35px;
@@ -62,9 +67,9 @@
     border-style: solid;
     border-radius: 2px;
     border-width: 1px;">
-        </div>
-        <div>
-            <button  style="margin: 70px 3px 3px 3px;
+            </div>
+            <div>
+                <button style="margin: 20px 3px 3px 3px;
     /* font-family: inherit; */
     font-size: 12px;
     line-height: 33px;
@@ -81,11 +86,33 @@
     font-size: 15px;
     font-weight: bold;
     color: white;
-">로그인</button>
+">로그인
+                </button>
+            </div>
+        </div>
+        <div style="    border: solid 1px lightgray;
+    padding: 15px;
+    margin-top: 20px;
+    width: 350px;
+    height: 70px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+font-size:15px;
+justify-content: center;
+}">
+            계정이 없으신가요?
+            <button class="button_no_background" style="
+                                                                    background: white;
+                                                                    border-style: none;
+                                                                    font-weight: bold;
+                                                                    color: dodgerblue;
+                                                                    outline:none;
+                                                                    ">가입하기
+            </button>
         </div>
     </div>
 </div>
-
 
 <!-- Optional JavaScript; choose one of the two! -->
 
