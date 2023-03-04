@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     {% load static %} <!--이 부분이 있어야 urls.py에서 정의한 media root을 찾을 수 있음-->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -55,7 +56,6 @@
                                                              z-index: 10;
                                                              ">
 
-
         <div class="container-fluid" style="
                                  width:1000px;
                                  justify-content: space-between;
@@ -65,192 +65,184 @@
                                                    src="https://fontmeme.com/images/instagram-new-logo.png"></a>
 
             <input class="form-control me-2" style="
-                                         width : 300px;
-                                         background-color:#fafafa ;
-                                         border-style: none;
-                                         box-shadow: none;
-                                         text-align: center;
+                                                 width : 300px;
+                                                 background-color:#fafafa ;
+                                                 border-style: none;
+                                                 box-shadow: none;
+                                                 text-align: center;
                " type="search" placeholder=검색 aria-label="Search"><!--hover시에는 텍스트 왼쪽부터 입력되게-->
 
 
-            <div style="
-             display:flex;
-             flex-direction: row;
-             ">
+            <div style="display:flex;
+                        flex-direction: row; ">
 
                 <link rel="stylesheet"
                       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,500,1,-25"/>
                 <span class="material-symbols-rounded" style="
-                                                    margin-right: 5px;
-                                                    cursor:pointer;"> home </span>
+                                                                margin-right: 5px;
+                                                                cursor:pointer;"> home </span>
                 <span class="material-symbols-sharp" style="
-                                                    margin-right: 5px;
-                                                    cursor:pointer;"> send </span>
+                                                            margin-right: 5px;
+                                                            cursor:pointer;"> send </span>
                 <span class="material-symbols-sharp" id="nav_bar_add_box" style="
-                                                                        margin-right: 5px;
-                                                                        cursor:pointer;"> add_box </span>
+                                                                                margin-right: 5px;
+                                                                                cursor:pointer;"> add_box </span>
                 <span class="material-symbols-sharp" style="
-                                                    margin-right: 5px;
-                                                    cursor:pointer;"> explore </span>
+                                                            margin-right: 5px;
+                                                            cursor:pointer;"> explore </span>
                 <span class="material-symbols-sharp" style="
-                                                    margin-right: 5px;
-                                                    cursor:pointer;"> favorite </span>
+                                                            margin-right: 5px;
+                                                            cursor:pointer;"> favorite </span>
                 <div class="box3" style="
-                                width: 25px;
-                                height: 25px;
-                                border-radius: 70%;
-                                object-fit: cover;
-                                overflow: hidden;
-                                cursor:pointer;
-                                ">
-                    <img class="profile3" style="
-                                        width: 100%;
-                                        height: 100%;
+                                        width: 25px;
+                                        height: 25px;
+                                        border-radius: 70%;
                                         object-fit: cover;
-                                        display: block;"
+                                        overflow: hidden;
+                                        cursor:pointer;
+                                        ">
+                    <img class="profile3" style="
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                                display: block;"
                          src="https://www.elandrs.com/upload/prd/img/501/600/2203461501_0000011.jpg">
                 </div>
-
             </div>
-
-
         </div>
     </nav>
 
     <!--Background-->
     <div style="
-    width:100vw;
-    padding-top:100px;
-    background-color:#fafafa;">
+                width:100vw;
+                padding-top:100px;
+                background-color:#fafafa;">
 
         <!--Right Board div-->
         <div style="
-        position: fixed;
-    left: 915px;
-    width: 345px;
-    height: 1000px;
-    padding-left: 24px;
-    margin-top: -15px;">
+                    position: fixed;
+                    left: 915px;
+                    width: 345px;
+                    height: 1000px;
+                    padding-left: 24px;
+                    margin-top: -15px;">
             <div>
                 <div style="
-             display: flex;
-             flex-direction: column">
+                             display: flex;
+                             flex-direction: column">
 
                     <!--My profile-->
                     <div style="
-                 display: flex;
-                 flex-direction: row;
-                 align-items:center">
+                                 display: flex;
+                                 flex-direction: row;
+                                 align-items:center">
 
                         <div class="box" style="
-                                     width: 50px;
-                                     height: 50px;
-                                     margin: 15px;
-                                     border: solid 2px darkgrey;
-                                     border-radius: 70%;
-                                     overflow: hidden;">
+                                                 width: 50px;
+                                                 height: 50px;
+                                                 margin: 15px;
+                                                 border: solid 2px darkgrey;
+                                                 border-radius: 70%;
+                                                 overflow: hidden;">
 
                             <img class="profile" style="
-                                            width: 100%;
-                                            height: 100%;
-                                            object-fit: cover;"
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;"
                                  src="https://www.elandrs.com/upload/prd/img/501/600/2203461501_0000011.jpg">
-                           </div>
+                        </div>
 
                         <div style="
-                     display: flex;
-                     flex-direction: column;
-                     ">
+                                     display: flex;
+                                     flex-direction: column; ">
 
                             <div style="
-                         margin-bottom:-20px;
-                         font-weight: bold;
-                         ">phmhp
-                            </div>
+                                         margin-bottom:-20px;
+                                         font-weight: bold;
+                                         ">phmhp
+                                            </div>
 
                             <div style="
-                         font-size: 13px;
-                         color:gray;
-                         "><br>HM Park
-                            </div>
-                        </div>
+                                         font-size: 13px;
+                                         color:gray;
+                                         "><br>HM Park
+                                            </div>
+                                        </div>
 
 
                         <button class="button_no_background" style="
-                        margin-left: auto;
-                        background: #fafafa;
-                        border-style: none;
-                        font-weight: bold;
-                        color: dodgerblue;
-                        outline:none;
-                        ">전환
-                        </button>
+                                                                    margin-left: auto;
+                                                                    background: #fafafa;
+                                                                    border-style: none;
+                                                                    font-weight: bold;
+                                                                    color: dodgerblue;
+                                                                    outline:none;
+                                                                    ">전환
+                                                                    </button>
                     </div>
                     <!--Recommend For You Message Part-->
                     <div style="
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 10px
-                ">
-                        <div style="
-                     color:gray;
-                     font-weight: bold;
-                     ">회원님을 위한 추천
+                                display: flex;
+                                flex-direction: row;
+                                margin-bottom: 10px
+                                ">
+                    <div style="
+                                 color:gray;
+                                 font-weight: bold;
+                                 ">회원님을 위한 추천
                         </div>
 
                         <div class="text_no_background" style="
-                     margin-left: auto;
-                     font-weight: bold;
-                     ">모두 보기
+                                                                 margin-left: auto;
+                                                                 font-weight: bold;
+                                                                 ">모두 보기
                         </div>
                     </div>
 
                     <!--Recommend Another Users -->
                     <!--Recommended user-->
                     <div style="
-    display: flex;
-    flex-direction: row;
-
-                 ">
+                                display: flex;
+                                flex-direction: row;">
                         <div class="box2" style="
-                                  width: 30px;
-                                  height: 30px;
-                                  border-radius: 70%;
-                                  overflow: hidden;"
-                        >
+                                              width: 30px;
+                                              height: 30px;
+                                              border-radius: 70%;
+                                              overflow: hidden;">
                             <img class="profile2" style="
-                                          width: 100%;
-                                          margin-top: 0px;
-                                          object-fit: cover;"
+                                                          width: 100%;
+                                                          margin-top: 0px;
+                                                          object-fit: cover;"
                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
                         </div>
                         <div style="
-                     display: flex;
-                     flex-direction: column;
-                     margin-left: 10px
-                     ">
+                                     display: flex;
+                                     flex-direction: column;
+                                     margin-left: 10px
+                                     ">
+                        <div style="
+                                     margin-bottom:-20px;
+                                     font-size: 14px;
+                                     font-weight: bold;"
+                                        >user
+                                        </div>
                             <div style="
-                         margin-bottom:-20px;
-                         font-size: 14px;
-                         font-weight: bold;"
-                            >user
-                            </div>
-                            <div style="
-                         color:gray;
-                         font-size:11px;
-                         "><br>user name
-                            </div>
+                                         color:gray;
+                                         font-size:11px;
+                                         "><br>user name
+                                            </div>
                         </div>
-                        <button class="button_no_background" style="margin-left: auto;
-                background-color: #fafafa;
-                border-style: none;
-                font-weight: bold;
-                font-size: 14px;
-                color: dodgerblue;
-                outline:none;
-                ">팔로우
-                        </button>
-                    </div>
+                        <button class="button_no_background" style="
+                                                                    margin-left: auto;
+                                                                    background-color: #fafafa;
+                                                                    border-style: none;
+                                                                    font-weight: bold;
+                                                                    font-size: 14px;
+                                                                    color: dodgerblue;
+                                                                    outline:none;
+                                                                    ">팔로우
+                                                                            </button>
+                        </div>
                 </div>
             </div>
         </div>
@@ -260,36 +252,34 @@
         <div> <!--Left Feeds div (loop) -->
             {% for feed in feeds %}
                 <div style="    display: flex;
-    flex-direction: column;
-    margin-left: 18%;">
+                                flex-direction: column;
+                                margin-left: 18%;">
                     <!--left peed-->
                     <div style="    border: solid 1px darkgray;
-    border-radius: 8px;
-    background-color: white;
-    width: 610px;
-    height: 70%;
-    /* margin-right: 22%; */
-    margin-bottom: 3%;
-    min-width: 510px;
+                                    border-radius: 8px;
+                                    background-color: white;
+                                    width: 610px;
+                                    height: 70%;
+                                    margin-bottom: 3%;
+                                    min-width: 510px;
 }">
 
                         <!--User Information-->
-                        <div style="display: flex; flex-direction: row;align-items:center">
+                        <div style="display: flex;
+                                    flex-direction: row;
+                                    align-items:center">
                             <div class="box" style="
-                                width: 40px;
-                                height: 40px;
-                                margin: 15px 15px 15px 15px;
-                                border-radius: 70%;
-                                object-fit: cover;
-                                overflow: hidden;
-
-                                ">
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    margin: 15px 15px 15px 15px;
+                                                    border-radius: 70%;
+                                                    object-fit: cover;
+                                                    overflow: hidden; ">
                                 <img class="profile" style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                        display: block;"
-
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                            display: block;"
                                      src="{{ feed.profile_image }}">
                             </div>
                             <div><b>{{ feed.user_id }}</b></div>
@@ -299,18 +289,19 @@
 
 
                         <div>
-                            <img style="
-                        width:100%;
-                        overflow:hidden;
-                        object-fit:cover;
-                        aspect-ratio: 4/3;
-                        " class="post"
+                            <img class="post" style="
+                                                    width:100%;
+                                                    overflow:hidden;
+                                                    object-fit:cover;
+                                                    aspect-ratio: 4/3;"
                                  src="{% get_media_prefix %}{{ feed.image }}">
                         </div>
 
                         <div style="padding : 15px 15px 0 15px">
                             <!--Reaction Icons-->
-                            <div style="display:flex;flex-direction: row;justify-content:space-between">
+                            <div style="display:flex;
+                                        flex-direction: row;
+                                        justify-content:space-between">
                                 <div>
                                         <span class="material-symbols-outlined"
                                               style="margin-right: 5px">favorite</span>
@@ -329,7 +320,8 @@
                             <!--Number of Likes /  Posted Text, Time / Comments-->
                             <div style="font-size: 14px">
                                 <div><b>좋아요 {{ feed.like_count }}개</b></div> <!--좋아요 개수 변경되도록-->
-                                <div style="display:flex; flex-direction: row">
+                                <div style="display:flex;
+                                            flex-direction: row">
                                     <div><b>{{ feed.user_id }}</b>{{ feed.content }}
                                     </div> <!--작성자 아이디 / 본문 글 변경되도록-->
 
@@ -345,35 +337,35 @@
                         </div>
                         <!--Input Comment-->
                         <div style="
-                    display: flex;
-                    flex-direction: row;
-                    padding : 0 15px 15px  15px;
-                    ">
+                                    display: flex;
+                                    flex-direction: row;
+                                    padding : 0 15px 15px  15px;
+                                    ">
                             <div style="
-                         margin-top:-15px;
-                         font-size: 30px;
-                         ">☺
-                            </div>
+                                         margin-top:-15px;
+                                         font-size: 30px;
+                                         ">☺
+                                            </div>
                             <input type="text" placeholder="댓글달기..."
                                    style="
-                           display:block;
-                           width:400px;
-                           height:30px;
-                           margin:0px auto;
-                           border-style: none;
-                           border-radius: 10px;
-                           outline:none;
-                           caret-color: black;">
+                                           display:block;
+                                           width:400px;
+                                           height:30px;
+                                           margin:0px auto;
+                                           border-style: none;
+                                           border-radius: 10px;
+                                           outline:none;
+                                           caret-color: black;">
 
                             <button class="button_no_background" style="
-                            background-color: white;
-                            border-style: none;
-                            color: lightskyblue;
-                            font-weight:bold;
-                            opacity:70%;
-                            outline:none;
-                            ">게시
-                            </button> <!--입력하면 글자 색이 바뀌게-->
+                                                                        background-color: white;
+                                                                        border-style: none;
+                                                                        color: lightskyblue;
+                                                                        font-weight:bold;
+                                                                        opacity:70%;
+                                                                        outline:none;
+                                                                        ">게시
+                                                                        </button> <!--입력하면 글자 색이 바뀌게-->
                         </div>
                     </div>
                 </div>
@@ -402,7 +394,6 @@
                                                                         right: 40px;
                                                                         cursor: pointer;
                                                                         z-index: 1000;
-
                                                                           }">close </span></div>
 
 
@@ -410,66 +401,65 @@
 </div> <!--modal_overaly + modal_pop-up scroll bar (end)-->
 <!--Modal pop-up Background-->
 <div class="modal_overlay" style="
-                                   display: none;
-    position: fixed;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    align-items: center;
-    top: 0px;
-    z-index: 15;
-    overflow-y: scroll;
+                                    display: none;
+                                    position: fixed;
+                                    justify-content: center;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, 0.6);
+                                    backdrop-filter: blur(3px);
+                                    align-items: center;
+                                    top: 0px;
+                                    z-index: 15;
+                                    overflow-y: scroll;
 ">
 
 
     <!--First Modal pop-up (itself)-->
-    <div id="first_modal" c lass="modal_window" style="
-                                    display: none;
-                                    flex-direction: column;
-                                    position: absolute;
-                                    width: 500px;
-                                    height: 500px;background-color: white;
-                                    border-radius: 20px;
-                                    z-index: 100000;" }>
-       <div id="modal_white_zone" style="     width: 100%;
-    height: 45px;
-    background-color: white;
-    /* opacity: 0.4; */
-    border-radius: 20px 20px 0 0;">
+    <div id="first_modal" class="modal_window" style="
+                                                        display: none;
+                                                        flex-direction: column;
+                                                        position: absolute;
+                                                        width: 500px;
+                                                        height: 500px;background-color: white;
+                                                        border-radius: 20px;
+                                                        z-index: 100000;">
+        <div id="modal_white_zone" style="
+                                        width: 100%;
+                                        height: 45px;
+                                        background-color: white;
+                                        border-radius: 20px 20px 0 0;">
             <!--새 게시물 만들기+공유하기 버튼 (시작)-->
             <!--아래 div 수정하기-->
-            <div style="height: 45px;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;">
-                <div style="display: flex;
-    width: 100%;
-    /* justify-content: center; */
-    /* height: 45px; */
-    align-items: center;">
+            <div style="
+            display: flex;
+            flex-direction: row;
+            height: 45px;
+            width: 100%;
+            align-items: center; ">
+                <div style="
+                display: flex;
+                width: 100%;
+                align-items: center;">
                     <div style="    display: flex;
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    font-weight: bold;
-                ">새 게시물 만들기
+                                    width: 100%;
+                                    position: absolute;
+                                    justify-content: center;
+                                    font-weight: bold;
+                                                ">새 게시물 만들기
                     </div>
                 </div>
-                <div id= "after_img_upload_next" class="button_no_background" style="
-                        display: none;
-    border-style: none;
-    color: dodgerblue;
-    outline: none;
-    font-weight: bold;
-    font-size: 15px;
-    z-index: 150;
-    width: 100px;
-    flex-direction: row-reverse;
-    margin-right: 15px;
-}">다음
+                <div id="after_img_upload_next" class="button_no_background" style="
+                                                                                    display: none;
+                                                                                    flex-direction: row-reverse;
+                                                                                    width: 100px;
+                                                                                    margin-right: 15px;
+                                                                                    border-style: none;
+                                                                                    color: dodgerblue;
+                                                                                    outline: none;
+                                                                                    font-weight: bold;
+                                                                                    font-size: 15px;
+                                                                                    z-index: 150; ">다음
 
                 </div>
             </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
@@ -482,32 +472,29 @@
         <div>
             <!--img_upload_space 시작-->
             <div class='img_upload_space' style="
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    justify-content: center;
-    width: 100%;
-    height: 454px;
-    align-items: center;
-    top: 46px;
-    border-radius: 0 0 20px 20px;
-    z-index:140;
-    background-repeat: no-repeat;
-    background-position: center;
-
-"></div><!--img_upload_space 끝-->
+                                                display: flex;
+                                                flex-direction: row;
+                                                position: absolute;
+                                                justify-content: center;
+                                                width: 100%;
+                                                height: 454px;
+                                                background-repeat: no-repeat;
+                                                background-position: center;
+                                                align-items: center;
+                                                top: 46px;
+                                                border-radius: 0 0 20px 20px;
+                                                z-index:140; "></div><!--img_upload_space 끝-->
             <!--img_upload_space 이외 요소(아이콘,텍스트,버튼) 시작-->
             <div id="except_img_upload_space" style="display:flex">
                 <!--Icon div-->
-                <div id="modal_upload_icon" style="display: flex;
-    height: 240px;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    /* align-items: baseline; */
-    justify-content: center;
-    padding-top: 87px;
-}">
+                <div id="modal_upload_icon" style=" display: flex;
+                                                    justify-content: center;
+                                                    position: absolute;
+                                                    height: 240px;
+                                                    width: 100%;
+                                                    top: 70px;
+                                                    padding-top: 87px;
+                                                }">
                     <span class="material-symbols-outlined"
                           style="font-size: 150px;margin-bottom:70px">photo_library</span>
                 </div><!--Icon div (end)-->
@@ -548,53 +535,47 @@
 
     <!--Second Modal pop-up (itself)-->
     <div id="second_modal" class="modal_window" style="
-                                    display: none;
-    flex-direction: column;
-    position: absolute;
-    width: 724px;
-    height: 500px;
-    background-color: white;
-    border-radius: 20px;
-    z-index: 100000;
-}" }>
-        <div id="modal_white_zone" style="     width: 100%;
-    height: 45px;
-    background-color: white;
-    /* opacity: 0.4; */
-    border-radius: 20px 20px 0 0;">
+                                                        display: none;
+                                                        flex-direction: column;
+                                                        position: absolute;
+                                                        width: 724px;
+                                                        height: 500px;
+                                                        background-color: white;
+                                                        border-radius: 20px;
+                                                        z-index: 100000; ">
+        <div id="modal_white_zone" style="      width: 100%;
+                                                height: 45px;
+                                                background-color: white;
+                                                border-radius: 20px 20px 0 0;">
             <!--새 게시물 만들기+공유하기 버튼 (시작)-->
             <!--아래 div 수정하기-->
-            <div style="height: 45px;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;">
+            <div style="display: flex;
+                        flex-direction: row;
+                        height: 45px;
+                        width: 100%;
+                        align-items: center;
+                        ">
                 <div style="display: flex;
-    width: 100%;
-    /* justify-content: center; */
-    /* height: 45px; */
-    align-items: center;">
+                            width: 100%;
+                            align-items: center;">
                     <div style="    display: flex;
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    font-weight: bold;
-                ">새 게시물 만들기
+                                    position: absolute;
+                                    justify-content: center;
+                                    width: 100%;
+                                    font-weight: bold; ">새 게시물 만들기
                     </div>
                 </div>
-                <div id= "feed_create_button" class="button_no_background" style="
+                <div id="feed_create_button" class="button_no_background" style="
                         display: flex;
-    margin-right: 15px;
-    border-style: none;
-    color: dodgerblue;
-    outline: none;
-    font-weight: bold;
-    /* position: absolute; */
-    align-items: center;
-    width: 72px;
-    font-size: 15px;
-    z-index:150;
-}">공유하기
+                        width: 72px;
+                        margin-right: 15px;
+                        border-style: none;
+                        color: dodgerblue;
+                        outline: none;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 15px;
+                        z-index:150;  ">공유하기
 
                 </div>
             </div><!--새 게시물 만들기+공유하기 버튼 (끝)-->
@@ -605,138 +586,140 @@
         </div>
 
         <!--img_upload_space+ 코멘트 남기는 부분 (시작)-->
-        <div style="display: flex; flex-direction: row;">
+        <div style="display: flex;
+                    flex-direction: row;">
             <!--img_upload_space 시작-->
             <div class='img_upload_space' style="
-   display: flex;
-    flex-direction: row;
-    position: absolute;
-    justify-content: center;
-    width: 454px;
-    height: 454px;
-    align-items: center;
-    top: 46px;
-    border-radius: 0 0 0 20px;
-    z-index: 140;
-    border-right:solid 0.5px lightgray;
-    background-repeat: no-repeat;
-    background-position: center;
-"></div><!--img_upload_space 끝-->
+                                                display: flex;
+                                                flex-direction: row;
+                                                position: absolute;
+                                                justify-content: center;
+                                                width: 454px;
+                                                height: 454px;
+                                                align-items: center;
+                                                top: 46px;
+                                                border-radius: 0 0 0 20px;
+                                                z-index: 140;
+                                                border-right:solid 0.5px lightgray;
+                                                background-repeat: no-repeat;
+                                                background-position: center;
+                                            "></div><!--img_upload_space 끝-->
             <!--사진이랑 같이 올릴 문구 입력 부분 (시작)-->
             <!--내용이 길어지면 모달 창 내에서 스크롤 돼야함-->
             <!--창 작아질 때 모달창도 작아지게하려면?-->
             <div style="    display: flex;
-    flex-direction: column;
-    width: 270px;
-    height: 453px;
-    background-color: white;
-    position: absolute;
-    margin-left: 454px;
-    top: 47px;
-    padding: 15px;
-    border-radius: 0 0 20px 0;">
+                            flex-direction: column;
+                            position: absolute;
+                            width: 270px;
+                            height: 453px;
+                            background-color: white;
+                            margin-left: 454px;
+                            top: 47px;
+                            padding: 15px;
+                            border-radius: 0 0 20px 0;">
                 <!--작성자 정보(프로필사진,아이디) (시작)-->
-                <div style="display: flex; flex-direction: column;">
+                <div style="display: flex;
+                            flex-direction: column;">
                     <!--Recommended user-->
                     <div style="margin-bottom:15px;">
                         <div style="
-                 display: flex;
-                 flex-direction: row;
-                     height: 30px;
-    align-items: baseline;
-}
-                 ">
+                                     display: flex;
+                                     flex-direction: row;
+                                     height: 30px;
+                                     align-items: baseline;  ">
 
-                            <div class="box2" style="
-                                  width: 30px;
-                                  height: 30px;
-                                  border-radius: 70%;
-                                  overflow: hidden;"
-                            >
+                            <div class="box2" style="overflow: hidden;
+                                              width: 30px;
+                                              height: 30px;
+                                              border-radius: 70%; ">
                                 <img class="profile2" style="
-                                          width: 100%;
-                                          margin-top: 0px;
-                                          object-fit: cover;"
+                                                              width: 100%;
+                                                              margin-top: 0px;
+                                                              object-fit: cover;"
                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAACZmZmcnJwwMDCenp5sbGyTk5N+fn6WlpZ6enqLi4uOjo53d3eEhISIiIhzc3NdXV1FRUVSUlIXFxcRERFkZGQ4ODhAQEAqKiokJCRXV1dubm5lZWUdHR0tLS1BQUFMTExStGPNAAAEtklEQVR4nO2cWZeqOhBGJScMMigqgqJ92v//Ky8CTu0RJSmoou+3X3qtXj5krwoZKzWbAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/kyw/bd14Po+Xbvm9424NOcVh4WitVYtWnp/+IssiDio55wFVCUfbPXfTSCjDn3ZXtPJz7uZZU3ov/epQ6uQPdxOtyEPdodc6LrlbacGhM35Xx2DF3VBD9u8DeAmjy91WI4rgkwA26IS7tQasPwxgG0bvi7vBfSl7CVZ4E5sb+0VwglFc9RasFCPuVvdg9/kYc8eUhhvPyNCZzqQRG/TRRrHgbvpnmHyELQF32z/DMxacSD/dmoewGlAnsC3eWPhVQZxzt/89rk0IK8W/3AJvsfKruqn43WLv9egTGbfCG0Kzyf6GTrkVutlZh1AJX7tZTRVtEGVvoxa2nbQK4ppbohP7EDoq5pbooiAwdDxuiy5SCkMteb6I7T9D4XsogoGm+hBLbo0OLDZOd4Zbbo0OehwCdxgKXppmAYGg6OnCbm94NRS8R/z9hhmNoeBeOqP5DgWPNESzxZFbowOSGV9LnvFpVm3f3BodEGyAK8MNt0YHFgf6N0TvnjKKHbDPbdGJ9VGb8IFmNjsSGMq+uvhj301Dboc3RNYnwpJ3h2dSW0MlPSXDdnsheWPRsrQLopafcLq3MpR+a1FzsBlOJxBCu22w6M3vjf45bTckH3ffkZh+ilr2tdONjeFhxoQyvnOjfqqkr9fuMfoUA+mrmQdMNvvyM2ke6Js4pJwpzIQPVFHsMaQqZ4JPZ/rkDqmp5bE35B/ftWnZRzOvyfyPwqiU8DSoLk7ee0edTGqWeOLodDoqHU31WdeVTeX46ntUOjxxt4+EdfL0SLbWc+LJzYEv2Ze+U79zrgcWpbTW0XLy3fMnu9Nx6YeeFyXzQ1pMZCMIAAAAAAAAAACAf5LVcLeCnE2+St04iSLPOR/QaBV4UZjEbnrKJ3mWf0+Wp8skUPpyCPVw0F3/24n8Q5lLTpl9SSU3j9Sz2dOZYm3q+cfVlOKZfbvnKol98hUqTRXNS9mJly35dqH62d1rBvFadCy/1r5naHezVKEr9Ch8ny4s7S5UoTyIe0f6lYb63aDSB6U9V9C9d7ZekOo1aB2uZSwOiljRdM4nlHYO/CkoZTSQ3kWSt4Zrtg0G9WscF3zXcJXfwHqtI9NNcTmOX40Ox589PqifS+voj7yiW47r54xdqLYYsYPe0OPVG7YsWGbhOM5zkw3JY19DRW+EFcBfw9KdVAzeUwtev+Hz+VfcgkMrmiXhE6MH7Kg7brkGNdxwwzzIXBmsarRxfWBq9GEYQZJyAjQM9IiPpHAJDWoxhCBJtTkqBqnpRlJdh4wBXtMK+grPaPoEf5LSM3QMUD1D0Dhzhr4CypesEA4w6xOU9CCG+lpVnKGivoWTZ0h9cQPD0YEhDGHIDwxhCEN+YAhDGPIDQxjCkB8YwhCG/MAQhjDkB4YwhCE/MIQhDPmBIQxhyA8MYfh/NJSWuYcYGhieq5Coz6lb8fN/l45w+YFz/anTpwr/IIZ798qhYdkSN8z/if9I0v6paf8kyeKBsGYRRg94DUFDH8P/AB6wWaG5fgD0AAAAAElFTkSuQmCC">
                             </div>
                             <div style="
-                     display: flex;
-                     flex-direction: column;
-                     margin-left: 10px
-                     ">
+                                         display: flex;
+                                         flex-direction: column;
+                                         margin-left: 10px
+                                         ">
                                 <div style="
-                         margin-bottom:-20px;
-                         font-size: 14px;
-                         font-weight: bold;"
-                                >user
-                                </div>
+                                             margin-bottom:-20px;
+                                             font-size: 14px;
+                                             font-weight: bold;"
+                                                    >user
+                                                    </div>
                             </div>
                         </div>
                     </div><!--작성자 정보(프로필사진,아이디) (끝)-->
 
-                    <div style="display:flex; flex-direction: column;">
+                    <div style="display:flex;
+                                flex-direction: column;">
                         <div>
-                                <textarea id= "input_feed_content" placeholder="문구 입력..." style="color: gray; resize:none;
-    width: 240px;border-style: none;outline:none;
-    height: 140px;"></textarea></div>
-                        <div style=" display: flex;
-    flex-direction: row;
-    /* padding: 0 15px 15px 15px; */
-    width: 240px;
-    height: 23px;
-    align-items: flex-end;">
-                            <div style="margin-top: -20px; color: gray;
-    font-size: 30px;
-    position: absolute;
-    top: 210px;
-    left: 10px; ">☺
+                                <textarea id="input_feed_content" placeholder="문구 입력..." style="  width: 240px;
+                                                                                                    height: 140px;
+                                                                                                    border-style: none;
+                                                                                                    outline:none;
+                                                                                                    color: gray;
+                                                                                                    resize:none;
+                                                                                                    "></textarea></div>
+                        <div style="    display: flex;
+                                        flex-direction: row;
+                                        width: 240px;
+                                        height: 23px;
+                                        align-items: flex-end;">
+                            <div style="position: absolute;
+                                        top: 210px;
+                                        left: 10px;
+                                        margin-top: -20px;
+                                        color: gray;
+                                        font-size: 30px; ">☺
                             </div>
-                            <div style="font-size: 12px;
-    left: 212px;
-    position: absolute;
-    margin-right: 15px;">글자 수
+                            <div style="position: absolute;
+                                        margin-right: 15px;
+                                        left: 212px;
+                                        ont-size: 12px; ">글자 수
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--구분선-->
                 <div>
-                    <hr style="    margin: 10px -14px 10px -14px;
-    height: 0.5px;">
+                    <hr style="     height: 0.5px;
+                                    margin: 10px -14px 10px -14px;">
                 </div>   <!--구분선 (end)-->
                 <div>위치 추가</div>
                 <!--구분선-->
                 <div>
-                    <hr style="    margin: 10px -14px 10px -14px;
-    height: 0.5px;">
+                    <hr style="     height: 0.5px;
+                                    margin: 10px -14px 10px -14px;">
                 </div>   <!--구분선 (end)-->
                 <div>
                     접근성
                 </div>
                 <!--구분선-->
                 <div>
-                    <hr style="    margin: 10px -14px 10px -14px;
-    height: 0.5px;">
+                    <hr style="     height: 0.5px;
+                                    margin: 10px -14px 10px -14px;">
                 </div>   <!--구분선 (end)-->
                 <div>고급 설정</div>
                 <!--구분선-->
                 <div>
-                    <hr style="    margin: 10px -14px 10px -14px;
-    height: 0.5px;">
+                    <hr style="     height: 0.5px;
+                                    margin: 10px -14px 10px -14px;">
                 </div>   <!--구분선 (end)-->
-            </div>
-
-            <!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
-
+            </div><!--사진이랑 같이 올릴 문구 입력 부분 (끝)-->
         </div><!--Second Modal pop-up (itself) (end)-->
-
-
     </div><!--modal_overaly + modal_pop-up (end)-->
 </div>
 
+
+
+
+
 <script>
-//files를 어디서나 쓸 수 있게 전역변수 선언
-let files;
+    //files를 어디서나 쓸 수 있게 전역변수 선언
+    let files;
 
 
     //add_box를 눌러서 모달팝업 띄우기
@@ -767,8 +750,6 @@ let files;
         $(document.body).css({
             overflow: 'auto'
         })
-
-
     });
 
 
@@ -795,8 +776,6 @@ let files;
             $('#modal_upload_icon').css({
                 "color": "black"
             });
-
-
         }
     }
 
@@ -811,11 +790,9 @@ let files;
 
         if (files.length > 1) {
             alert('하나만 올릴 수 있습니다.');
-
             return;
         }
         if (files[0].type.match(/image.*/)) {
-
         } else {
             alert('이미지가 아닙니다.');
             return;
@@ -827,50 +804,45 @@ let files;
                 "background-size": "100% "
             });
             $("#after_img_upload_next").css({
-                "display":"flex"
+                "display": "flex"
             });
-
 
         } else {
             alert('이미지가 아닙니다.');
             return;
         }
-
-
     }
 
-      $("#after_img_upload_next").click(function () {
+    $("#after_img_upload_next").click(function () {
 
-          $("#except_img_upload_space").css({
-              "display": "none"
-          });
+        $("#except_img_upload_space").css({
+            "display": "none"
+        });
+        //이미지 업로드 이후 다음버튼을 눌렀을 때
+        $("#first_modal").css({
+            "display": "none"
+        })
+        $("#second_modal").css({
+            'display': 'flex'
+        })
+    });
 
-          //이미지 업로드 이후 다음버튼을 눌렀을 때
-            $("#first_modal").css({
-               "display": "none"
-           })
-           $("#second_modal").css({
-              'display': 'flex'
-           })
-      });
-
-
-    $("#feed_create_button").click(function(){
+    $("#feed_create_button").click(function () {
         alert("공유되었습니다.") //공유하시겠습니까? 로 바꾸고싶음!
 
-        let file=files[0]; //실제 이미지 파일
-        let image=files[0].name; //이미지 파일의 이름
-        let content=$("#input_feed_content").val(); //작성한 내용
-        let user_id='phmhp'; //추후에 업데이트 구현
-        let profile_image='https://www.elandrs.com/upload/prd/img/501/600/2203461501_0000011.jpg'; //추후에 업데이트 구현
+        let file = files[0]; //실제 이미지 파일
+        let image = files[0].name; //이미지 파일의 이름
+        let content = $("#input_feed_content").val(); //작성한 내용
+        let user_id = 'phmhp'; //추후에 업데이트 구현
+        let profile_image = 'https://www.elandrs.com/upload/prd/img/501/600/2203461501_0000011.jpg'; //추후에 업데이트 구현
 
         let fd = new FormData(); //FormData형태로 데이터를 가져와야함
 
-        fd.append('file',file);
-        fd.append('image',image);
-        fd.append('content',content);
-        fd.append('user_id',user_id);
-        fd.append('profile_image',profile_image);
+        fd.append('file', file);
+        fd.append('image', image);
+        fd.append('content', content);
+        fd.append('user_id', user_id);
+        fd.append('profile_image', profile_image);
 
         //ajax (jquery에서는 $.ajax();형태로 사용할 수 있다.
         //url:어떤 url을 호출할건지
@@ -880,20 +852,19 @@ let files;
         $.ajax({
             url: "/content/upload",
             data: fd,
-            method:"POST",
-            processData:false,
-            contentType:false,
-            success: function(data){
+            method: "POST",
+            processData: false,
+            contentType: false,
+            success: function (data) {
                 console.log('성공');
                 location.replace('/main');
             },
-            error:function(request,status,error) {
+            error: function (request, status, error) {
                 console.log("에러");
             },
-            complete: function(){
+            complete: function () {
                 console.log("완료");
             }
-
         })
     });
 </script>
