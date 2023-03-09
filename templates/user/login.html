@@ -37,36 +37,31 @@
 }"
                 >
             </div>
-            <div>
-                <input type="text" placeholder="휴대폰 번호 또는 이메일 주소" style="margin: 3px;
-    /* font-family: inherit; */
-    font-size: 12px;
-    line-height: 35px;
-    width: 250px;
-    padding: 0 6px 0 6px;
-    background-color: #fbfbfb;
-    border-color: lightgray;
-    box-shadow: yellowgreen;
-    /* outline-color: lightgray; */
-    outline-style: none;
-    border-style: solid;
-    border-radius: 2px;
-    border-width: 1px;">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="input_email" placeholder="name@example.com"
+                       style="width: 250px;
+                          height: 38px;
+                          margin-bottom:-10px;
+                          padding-top: 18px;
+                          background-color: #fafafa;
+                          box-shadow: none;
+                          font-size: 12px;">
+                <label for="input_email" style=" margin-top: -5px;
+                                             font-size: 11px;
+                                             color: gray;">이메일 주소</label>
             </div>
-            <div><input type="password" placeholder="비밀번호" style="margin: 3px;
-    /* font-family: inherit; */
-    font-size: 12px;
-    line-height: 35px;
-    width: 250px;
-    padding: 0 6px 0 6px;
-    background-color: #fbfbfb;
-    border-color: lightgray;
-    box-shadow: yellowgreen;
-    /* outline-color: lightgray; */
-    outline-style: none;
-    border-style: solid;
-    border-radius: 2px;
-    border-width: 1px;">
+            <div class="form-floating">
+                <input type="password" class="form-control" id="input_password" placeholder="Password"
+                       style="width: 250px;
+                          height: 38px;
+                          margin-bottom:5px;
+                          padding-top: 18px;
+                          background-color: #fafafa;
+                          box-shadow: none;
+                          font-size: 12px;">
+                <label for="input_password" style=" margin-top: -5px;
+                                             font-size: 11px;
+                                             color: gray;">비밀번호</label>
             </div>
             <div>
                 <button style="margin: 20px 3px 3px 3px;
@@ -102,7 +97,7 @@ font-size:15px;
 justify-content: center;
 }">
             계정이 없으신가요?
-             <a style="background: white;
+            <a style="background: white;
              margin-left: 10px;
                                                                     border-style: none;
                                                                     font-weight: bold;
