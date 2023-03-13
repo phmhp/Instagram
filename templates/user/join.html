@@ -154,9 +154,30 @@ justify-content: center;
         let nickname = $('#input_nickname').val()
         let password = $('#input_password').val()
 
-        console.log(email, password, nickname, name);
+        console.log(email, name, nickname, password);
 
-
+//data {}에 넣은 것들은 key:value임. value에 input form을 통해 받은 데이터들을 넣는다는 것!
+ $.ajax({
+            url: "/user/join",
+            data: {
+                email:email,
+                name:name,
+                nickname:nickname,
+                password:password
+            },
+            method: "POST",
+            success: function (data) {
+                console.log('성공');
+                alert("회원가입이 되었습니다. 로그인해주세요");
+                location.replace('/user/login');
+            },
+            error: function (request, status, error) {
+                console.log("에러");
+            },
+            complete: function () {
+                console.log("완료");
+            }
+        })
     })
 </script>
 
