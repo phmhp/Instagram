@@ -11,8 +11,7 @@ class Main(APIView):
         feed_list = Feed.objects.all().order_by('-id') # select * from content_feed;와 동일한 역할을 함.
                                                       # .models.py에서 정의한 Feed의 객체들을 모두 feed_list라는 리스트에 넣어줌
 
-        print('로그인한 사용자 : ',request.session['email']) #로그인이 제대로 됐는지 확인하기 위해 로그를 찍어보는 과정.
-        email = request.session['email']
+        email = request.session.get('email',None) #session을 통해 email을 가져오고, 만약에 없으면 None
         user = User.objects.filter(email=email).first()
         if email is None:
             return render(request, "user/login.html") #로그인이 되지않은 상태일 경우에 로그인을 하고 메인페이지를 볼 수 있도록 로그인페이지로 이동.

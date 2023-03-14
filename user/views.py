@@ -51,5 +51,8 @@ class Login(APIView):
         else: #로그인에 실패했다면
             return Response(status=400, data=dict(message="회원정보가 잘못됐습니다."))
 
-
-#request : 클라이언트로부터 요청이 옴
+class Logout(APIView):
+    #로그아웃을 하기 위해서는 세션을 끊어주면 됨.
+    def get(self,request):
+        request.session.flush() #세션 끝내기 (flush는 clear 이후에 delete까지 함)
+        return render(request,"user/login.html") #세션이 끝난 이후에는 다시 로그인할 수 있는 화면으로 이동
