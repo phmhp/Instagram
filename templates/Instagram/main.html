@@ -43,6 +43,15 @@
 </head>
 
 <body style="overflow-x:hidden">
+
+<!--content.views의 Main함수에서 session을 통해 가져온 email로 User.objects.filter(email=email).first()로 접근해온 정보가 main.html에 제대로 전달됐는지 확인하는 코드_성공  -->
+<div>
+    {{ user.email }}
+    {{ user.name }}
+    {{ user.nickname }}
+    {{ user.profile_image }}
+</div>
+
 <div id="try_element"><!--모달제외한 메인화면 전체-->
 
     <!--nav bar-->
@@ -160,14 +169,14 @@
                                          margin-bottom:-20px;
                                          font-weight: bold;
                                          ">phmhp
-                                            </div>
+                            </div>
 
                             <div style="
                                          font-size: 13px;
                                          color:gray;
                                          "><br>HM Park
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>
 
 
                         <button class="button_no_background" style="
@@ -178,7 +187,7 @@
                                                                     color: dodgerblue;
                                                                     outline:none;
                                                                     ">전환
-                                                                    </button>
+                        </button>
                     </div>
                     <!--Recommend For You Message Part-->
                     <div style="
@@ -186,7 +195,7 @@
                                 flex-direction: row;
                                 margin-bottom: 10px
                                 ">
-                    <div style="
+                        <div style="
                                  color:gray;
                                  font-weight: bold;
                                  ">회원님을 위한 추천
@@ -220,17 +229,17 @@
                                      flex-direction: column;
                                      margin-left: 10px
                                      ">
-                        <div style="
+                            <div style="
                                      margin-bottom:-20px;
                                      font-size: 14px;
                                      font-weight: bold;"
-                                        >user
-                                        </div>
+                            >user
+                            </div>
                             <div style="
                                          color:gray;
                                          font-size:11px;
                                          "><br>user name
-                                            </div>
+                            </div>
                         </div>
                         <button class="button_no_background" style="
                                                                     margin-left: auto;
@@ -241,8 +250,8 @@
                                                                     color: dodgerblue;
                                                                     outline:none;
                                                                     ">팔로우
-                                                                            </button>
-                        </div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -345,7 +354,7 @@
                                          margin-top:-15px;
                                          font-size: 30px;
                                          ">☺
-                                            </div>
+                            </div>
                             <input type="text" placeholder="댓글달기..."
                                    style="
                                            display:block;
@@ -365,7 +374,7 @@
                                                                         opacity:70%;
                                                                         outline:none;
                                                                         ">게시
-                                                                        </button> <!--입력하면 글자 색이 바뀌게-->
+                            </button> <!--입력하면 글자 색이 바뀌게-->
                         </div>
                     </div>
                 </div>
@@ -647,8 +656,8 @@
                                              margin-bottom:-20px;
                                              font-size: 14px;
                                              font-weight: bold;"
-                                                    >user
-                                                    </div>
+                                >user
+                                </div>
                             </div>
                         </div>
                     </div><!--작성자 정보(프로필사진,아이디) (끝)-->
@@ -712,9 +721,6 @@
         </div><!--Second Modal pop-up (itself) (end)-->
     </div><!--modal_overaly + modal_pop-up (end)-->
 </div>
-
-
-
 
 
 <script>
