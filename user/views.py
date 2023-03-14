@@ -44,6 +44,12 @@ class Login(APIView):
         #check_password(password)를 해서 만약 맞으면 True, 틀리면 False를 반환할 것.
         if user.check_password(password):
             #TODO 로그인이 성공했다면-> 세션 or 쿠키에 넣는다.
+            request.session['email']=email # 세션정보에 있는 email에 내 mail주소를 넣을 수 있게 됨.
+                                           # 그래서 session['email']하면 저장된 mail주소 값을 불러낼 수 있음
+                                           # email로 session정보를 넣으면 user.objects에서 회원 정보(email 이외의 name,nickname 등)를 가져올 수 있기 때문.
             return Response(status=200)
         else: #로그인에 실패했다면
             return Response(status=400, data=dict(message="회원정보가 잘못됐습니다."))
+
+
+#request : 클라이언트로부터 요청이 옴
