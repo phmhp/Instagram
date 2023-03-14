@@ -44,13 +44,6 @@
 
 <body style="overflow-x:hidden">
 
-<!--content.views의 Main함수에서 session을 통해 가져온 email로 User.objects.filter(email=email).first()로 접근해온 정보가 main.html에 제대로 전달됐는지 확인하는 코드_성공  -->
-<div>
-    {{ user.email }}
-    {{ user.name }}
-    {{ user.nickname }}
-    {{ user.profile_image }}
-</div>
 
 <div id="try_element"><!--모달제외한 메인화면 전체-->
 
@@ -168,13 +161,13 @@
                             <div style="
                                          margin-bottom:-20px;
                                          font-weight: bold;
-                                         ">phmhp
+                                         ">{{ user.nickname }}
                             </div>
 
                             <div style="
                                          font-size: 13px;
                                          color:gray;
-                                         "><br>HM Park
+                                         "><br>{{ user.name }}
                             </div>
                         </div>
 
